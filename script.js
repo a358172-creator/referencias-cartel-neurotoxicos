@@ -110,33 +110,26 @@ const references = [
 // Render references when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
   renderReferences();
-  initTheme();
   setupEventListeners();
 });
 
 /* ============================================
-   RENDER REFERENCES
-   ============================================ */
+    RENDER REFERENCES
+    ============================================ */
 
 function renderReferences() {
   const referencesList = document.getElementById('references-list');
+  const refHeader = document.querySelector('.references-header');
   
   if (!referencesList) {
     console.error('Element #references-list not found');
     return;
   }
 
+  // Render reference cards
   referencesList.innerHTML = references
     .map((ref, index) => createReferenceCard(ref, index))
     .join('');
-
-  // Add animation delays
-  const cards = referencesList.querySelectorAll('.reference-card');
-  cards.forEach((card, index) => {
-    card.style.animationDelay = `${index * 0.05}s`;
-  });
-
-  observeReferences();
 }
 
 function createReferenceCard(ref, index) {
@@ -148,8 +141,7 @@ function createReferenceCard(ref, index) {
   if (ref.doi) {
     identifiersHTML += `
       <a href="https://doi.org/${ref.doi}" target="_blank" rel="noopener noreferrer" class="identifier-button doi" title="Abrir DOI en nueva pestaña">
-        <span>DOI</span>
-        <span>↗</span>
+        DOI ↗
       </a>
     `;
   }
@@ -158,7 +150,7 @@ function createReferenceCard(ref, index) {
   if (ref.pmid) {
     identifiersHTML += `
       <a href="https://pubmed.ncbi.nlm.nih.gov/${ref.pmid}/" target="_blank" rel="noopener noreferrer" class="identifier-button pmid" title="Abrir PMID en PubMed">
-        <span>PMID: ${ref.pmid}</span>
+        PMID: ${ref.pmid}
       </a>
     `;
   }
@@ -167,172 +159,33 @@ function createReferenceCard(ref, index) {
   if (ref.pmcid) {
     identifiersHTML += `
       <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/${ref.pmcid}/" target="_blank" rel="noopener noreferrer" class="identifier-button pmcid" title="Abrir en PubMed Central">
-        <span>${ref.pmcid}</span>
+        ${ref.pmcid}
       </a>
     `;
   }
 
   return `
     <article class="reference-card">
-      <div class="reference-header">
-        <div class="reference-number">${number}</div>
-        <div class="reference-content">
-          <p class="reference-authors">${ref.authors}</p>
-          <p class="reference-title">"${ref.title}"</p>
-          <div class="reference-journal">
-            <span class="journal-name">${ref.journal}</span>
-            <span class="journal-year">${ref.year}</span>
-            ${ref.details ? `<span class="journal-details">${ref.details}</span>` : ''}
-          </div>
-          ${identifiersHTML ? `<div class="reference-identifiers">${identifiersHTML}</div>` : ''}
+      <div class="reference-number">${number}</div>
+      <div class="reference-content">
+        <p class="reference-authors">${ref.authors}</p>
+        <p class="reference-title">"${ref.title}"</p>
+        <div class="reference-journal">
+          <span class="journal-name">${ref.journal}</span>
+          <span class="journal-year">${ref.year}</span>
+          ${ref.details ? `<span class="journal-details">${ref.details}</span>` : ''}
         </div>
+        ${identifiersHTML ? `<div class="reference-identifiers">${identifiersHTML}</div>` : ''}
       </div>
     </article>
   `;
 }
 
 /* ============================================
-   INTERSECTION OBSERVER FOR SCROLL ANIMATION
-   ============================================ */
-
-function observeReferences() {
-  const options = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, options);
-
-  const cards = document.querySelectorAll('.reference-card');
-  cards.forEach((card) => {
-    observer.observe(card);
-  });
-}
-
-/* ============================================
-   COPY FUNCTIONALITY
-   ============================================ */
-
-function createFullCitation(ref, index) {
-  let citation = `${index + 1}. ${ref.authors} ${ref.title} ${ref.journal} ${ref.year}`;
-
-  if (ref.details) {
-    citation += `; ${ref.details}`;
-  }
-
-  if (ref.doi) {
-    citation += `. doi: ${ref.doi}`;
-  }
-
-  if (ref.pmid) {
-    citation += `. PMID: ${ref.pmid}`;
-  }
-
-  if (ref.pmcid) {
-    citation += `. ${ref.pmcid}`;
-  }
-
-  return citation;
-}
-
-async function copyReferences() {
-  try {
-    const citations = references
-      .map((ref, index) => createFullCitation(ref, index))
-      .join('\n\n');
-
-    await navigator.clipboard.writeText(citations);
-    showToast();
-  } catch (err) {
-    console.error('Error copying to clipboard:', err);
-    fallbackCopy();
-  }
-}
-
-function fallbackCopy() {
-  const citations = references
-    .map((ref, index) => createFullCitation(ref, index))
-    .join('\n\n');
-
-  const textarea = document.createElement('textarea');
-  textarea.value = citations;
-  document.body.appendChild(textarea);
-  textarea.select();
-  document.execCommand('copy');
-  document.body.removeChild(textarea);
-  showToast();
-}
-
-function showToast() {
-  const toast = document.getElementById('toast');
-  if (toast) {
-    toast.classList.add('show');
-    setTimeout(() => {
-      toast.classList.remove('show');
-    }, 3000);
-  }
-}
-
-/* ============================================
-   THEME TOGGLE
-   ============================================ */
-
-function toggleTheme() {
-  const body = document.body;
-  const isLight = body.classList.toggle('light');
-
-  // Update nav button
-  const themeNavButton = document.getElementById('themeNavButton');
-  if (themeNavButton) {
-    const icon = themeNavButton.querySelector('.theme-icon');
-    if (icon) {
-      icon.textContent = isLight ? '☀️' : '🌙';
-    }
-    themeNavButton.setAttribute('aria-label', isLight ? 'Cambiar a modo oscuro' : 'Cambiar a modo claro');
-  }
-
-  // Save preference
-  localStorage.setItem('theme', isLight ? 'light' : 'dark');
-}
-
-function initTheme() {
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'light') {
-    document.body.classList.add('light');
-    const themeNavButton = document.getElementById('themeNavButton');
-    if (themeNavButton) {
-      const icon = themeNavButton.querySelector('.theme-icon');
-      if (icon) {
-        icon.textContent = '☀️';
-      }
-    }
-  }
-}
-
-/* ============================================
-   EVENT LISTENERS SETUP
-   ============================================ */
+    EVENT LISTENERS SETUP
+    ============================================ */
 
 function setupEventListeners() {
-  // Copy button in nav
-  const copyNavButton = document.getElementById('copyNavButton');
-  if (copyNavButton) {
-    copyNavButton.addEventListener('click', copyReferences);
-  }
-
-  // Theme toggle button
-  const themeNavButton = document.getElementById('themeNavButton');
-  if (themeNavButton) {
-    themeNavButton.addEventListener('click', toggleTheme);
-  }
-
   // Smooth scroll to references
   const navLink = document.querySelector('.nav-link[href="#references"]');
   if (navLink) {
@@ -346,9 +199,5 @@ function setupEventListeners() {
   }
 }
 
-/* ============================================
-   UTILITY: Log
-   ============================================ */
-
-console.log('%cNEUROREDOX — Scientific Research', 'color: #00d4ff; font-weight: bold; font-size: 14px; font-family: monospace;');
-console.log('%cBibliography loaded: ' + references.length + ' references', 'color: #7c3aed; font-size: 12px; font-family: monospace;');
+console.log('%cCientific Reference Library', 'color: #596653; font-weight: bold; font-size: 14px; font-family: serif;');
+console.log('%cBibliografía cargada: ' + references.length + ' referencias', 'color: #A47D5B; font-size: 12px;');
