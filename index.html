@@ -3,119 +3,156 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Referencias bibliográficas del proyecto Vulnerabilidad del cerebro edad-dependiente ante insultos neurotóxicos. Estudio de neurociencias enfocado en redox, excitotoxicidad y desarrollo cerebral.">
-  <title>NEUROREDOX — Vulnerabilidad del cerebro edad-dependiente | Bibliografía</title>
+  <meta name="description" content="Referencias bibliográficas del proyecto Vulnerabilidad del cerebro edad-dependiente ante insultos neurotóxicos. Biblioteca científica de neurociencias.">
+  <title>Referencias Científicas — Vulnerabilidad del cerebro edad-dependiente ante insultos neurotóxicos</title>
+  
+  <!-- Fonts: Editorial serif + clean sans-serif -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation Bar -->
+  <!-- Subtle Background Pattern -->
+  <div class="bg-pattern" aria-hidden="true"></div>
+
+  <!-- Navigation -->
   <nav class="navbar" role="navigation" aria-label="Navegación principal">
     <div class="nav-container">
-      <div class="nav-brand">
-        <span class="nav-logo">NEUROREDOX</span>
+      <div class="nav-logo">
+        <span class="logo-accent">‖</span> Referencias
       </div>
-      <div class="nav-items">
-        <a href="#references" class="nav-link">REFERENCIAS</a>
-        <button id="copyNavButton" class="nav-link-button" aria-label="Copiar todas las referencias">COPIAR</button>
-        <button id="themeNavButton" class="nav-theme" aria-label="Cambiar modo oscuro/claro">
-          <span class="theme-icon">🌙</span>
-        </button>
+      <div class="nav-links">
+        <a href="#about" class="nav-link">Proyecto</a>
+        <a href="#references" class="nav-link">Referencias</a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <!-- Animated Background -->
-    <div class="hero-bg" aria-hidden="true">
-      <div class="neural-lattice"></div>
-      <svg class="neural-animation" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
-        <defs>
-          <filter id="blur">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
-          </filter>
-        </defs>
-        <g class="neural-network" filter="url(#blur)">
-          <circle cx="100" cy="100" r="3" class="neuron"/>
-          <circle cx="300" cy="120" r="3" class="neuron"/>
-          <circle cx="80" cy="280" r="3" class="neuron"/>
-          <circle cx="320" cy="300" r="3" class="neuron"/>
-          <circle cx="200" cy="200" r="2.5" class="neuron"/>
-          <line x1="100" y1="100" x2="200" y2="200" class="synapse"/>
-          <line x1="300" y1="120" x2="200" y2="200" class="synapse"/>
-          <line x1="80" y1="280" x2="200" y2="200" class="synapse"/>
-          <line x1="320" y1="300" x2="200" y2="200" class="synapse"/>
-          <line x1="100" y1="100" x2="300" y2="120" class="synapse"/>
-          <line x1="80" y1="280" x2="320" y2="300" class="synapse"/>
-        </g>
-      </svg>
-    </div>
-
-    <!-- Hero Content -->
-    <div class="hero-content">
-      <div class="hero-eyebrow">
-        <span class="eyebrow-dot"></span>
-        NEUROSCIENCE RESEARCH · BIBLIOGRAPHY
-      </div>
-      
-      <h1 class="hero-title">
-        Vulnerabilidad del cerebro<br>
-        <span class="title-emphasis">edad-dependiente</span><br>
-        ante insultos neurotóxicos
-      </h1>
-      
-      <p class="hero-subtitle">Referencias bibliográficas</p>
-      
-      <p class="hero-description">
-        Fuentes científicas que sustentan el estudio de la vulnerabilidad cerebral edad-dependiente frente a mecanismos oxidativos, excitotóxicos y neurotóxicos.
-      </p>
-    </div>
-
-    <!-- Stats Section -->
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-number">10</div>
-        <div class="stat-label">REFERENCIAS</div>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <div class="stat-number">2009–2021</div>
-        <div class="stat-label">PERÍODO BIBLIOGRÁFICO</div>
-      </div>
-    </div>
-  </header>
-
   <!-- Main Content -->
-  <main class="main-content">
+  <main class="site-main">
+    
+    <!-- Hero / Header Section -->
+    <header class="hero">
+      <div class="hero-container">
+        <!-- Field Label -->
+        <div class="hero-label">
+          NEUROCIENCIA INVESTIGACIÓN
+        </div>
+        
+        <!-- Main Title -->
+        <h1 class="hero-title">
+          Vulnerabilidad del cerebro<br>
+          edad-dependiente ante<br>
+          insultos neurotóxicos
+        </h1>
+        
+        <!-- Authors -->
+        <div class="hero-meta">
+          <p class="authors">
+            López-Holguín A. · Pérez-de-la-Cruz V. · Plamenov-Donchev N.
+          </p>
+        </div>
+        
+        <!-- Institutions -->
+        <div class="hero-institutions">
+          <div class="institution">
+            Universidad Autónoma de Chihuahua<br>
+            Laboratorio de Fisiología, FMYCB
+          </div>
+          <div class="institution">
+            Instituto Nacional de Neurología y Neurocirugía<br>
+            "Manuel Velasco Suárez" · Laboratorio de Neurobioquímica y Conducta
+          </div>
+        </div>
+        
+        <!-- Decorative Line -->
+        <div class="hero-divider"></div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="section-container">
+        <div class="about-content">
+          <p class="about-text">
+            El desarrollo del sistema nervioso central depende de un equilibrio redox que participa en procesos como la neurogénesis, el metabolismo energético y la plasticidad sináptica.
+          </p>
+          
+          <p class="about-text">
+            Este proyecto estudia cómo la susceptibilidad del cerebro frente a insultos oxidativos, mitocondriales y excitotóxicos cambia durante el desarrollo posnatal.
+          </p>
+          
+          <div class="about-objective">
+            <div class="objective-label">Objetivo</div>
+            <p class="objective-text">
+              Determinar la susceptibilidad del cerebro en diferentes estadios posnatales al daño excitotóxico, mitocondrial y oxidante.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- References Section -->
-    <section id="references" class="references-section" aria-label="Lista de referencias científicas">
-      <!-- Timeline will be inserted here via JavaScript -->
-      <div class="references-timeline">
-        <div class="timeline-line"></div>
-        <div id="references-list" class="references-list"></div>
+    <section id="references" class="references-section" aria-label="Biblioteca de referencias científicas">
+      <div class="section-container">
+        
+        <!-- Section Header -->
+        <div class="references-header">
+          <div class="ref-count">
+            <span class="ref-number">{{ count }}</span>
+            <span class="ref-label">REFERENCIAS</span>
+          </div>
+          <p class="ref-description">Fuentes bibliográficas que sustentan este proyecto de neurociencias</p>
+        </div>
+
+        <!-- References List -->
+        <div id="references-list" class="references-list" role="region" aria-label="Lista de referencias">
+          <!-- Populated by JavaScript -->
+        </div>
+
       </div>
     </section>
 
     <!-- Footer -->
     <footer class="site-footer">
-      <div class="footer-content">
-        <p class="footer-title">Scientific bibliography</p>
-        <p class="footer-subtitle">Vulnerabilidad del cerebro edad-dependiente ante insultos neurotóxicos</p>
-        <p class="footer-meta">10 references · 2009–2021</p>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h2 class="footer-title">Vulnerabilidad del cerebro edad-dependiente ante insultos neurotóxicos</h2>
+        </div>
+        
+        <div class="footer-section">
+          <p class="footer-authors">
+            <strong>Autores:</strong><br>
+            López-Holguín A.<br>
+            Pérez-de-la-Cruz V.<br>
+            Plamenov-Donchev N.
+          </p>
+        </div>
+        
+        <div class="footer-section">
+          <p class="footer-affiliations">
+            <strong>Instituciones:</strong><br>
+            Universidad Autónoma de Chihuahua<br>
+            Instituto Nacional de Neurología y Neurocirugía
+          </p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-meta">Proyecto científico en neurociencias · 2024</p>
       </div>
     </footer>
+
   </main>
 
-  <!-- Toast Notification -->
+  <!-- Toast for Copy Feedback -->
   <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true">
     <span class="toast-icon">✓</span>
-    Referencias copiadas al portapapeles
+    <span class="toast-text">Copiado al portapapeles</span>
   </div>
 
-  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>
