@@ -11,9 +11,9 @@ const references = [
     journal: 'Arch Biochem Biophys.',
     year: 2015,
     details: '576:2-7',
-    doi: '10.1016/j.abb.2015.03.036',
-    pmid: '25900963',
-    pmcid: 'PMC4475801'
+    doi: '10.1016/j.abb.2015.03.014',
+    pmid: null,
+    pmcid: null
   },
   {
     authors: 'Franco R, Vargas MR.',
@@ -21,79 +21,79 @@ const references = [
     journal: 'Antioxid Redox Signal.',
     year: 2018,
     details: '28(18):1583-1586',
-    doi: '10.1089/ars.2018.7516',
-    pmid: '29405812',
-    pmcid: 'PMC5945219'
+    doi: '10.1089/ars.2018.7509',
+    pmid: null,
+    pmcid: null
   },
   {
     authors: 'Aizenman E, Loring RH, Reynolds IJ, Rosenberg PA.',
     title: 'The Redox Biology of Excitotoxic Processes: The NMDA Receptor, TOPA Quinone, and the Oxidative Liberation of Intracellular Zinc.',
-    journal: 'Antioxid Redox Signal.',
-    year: 2016,
-    details: '24(5):201-213',
-    doi: '10.1089/ars.2015.6483',
-    pmid: '26511106',
-    pmcid: 'PMC4735373'
+    journal: 'Front Neurosci.',
+    year: 2020,
+    details: '14:778',
+    doi: '10.3389/fnins.2020.00778',
+    pmid: null,
+    pmcid: null
   },
   {
     authors: 'Girouard H, Wang G, Gallo EF, Anrather J, Zhou P, Pickel VM, Iadecola C.',
     title: 'NMDA receptor activation increases free radical production through nitric oxide and NOX2.',
     journal: 'J Neurosci.',
     year: 2009,
-    details: '29(9):2672-2681',
-    doi: '10.1523/JNEUROSCI.0996-08.2009',
-    pmid: '19261863',
-    pmcid: 'PMC2680041'
+    details: '29(8):2545-52',
+    doi: '10.1523/JNEUROSCI.0133-09.2009',
+    pmid: null,
+    pmcid: null
   },
   {
     authors: 'Reyes RC, Brennan AM, Shen Y, Baldwin Y, Swanson RA.',
     title: 'Activation of neuronal NMDA receptors induces superoxide-mediated oxidative stress in neighboring neurons and astrocytes.',
     journal: 'J Neurosci.',
     year: 2012,
-    details: '32(37):12973-12978',
+    details: '32(37):12973-8',
     doi: '10.1523/JNEUROSCI.1597-12.2012',
-    pmid: '22973021',
-    pmcid: 'PMC3461697'
-  },
-  {
-    authors: 'Parellada E, Gassó P.',
-    title: 'Activación del glutamato y la microglía como factor desencadenante de la apoptosis dendrítica: un mecanismo fisiopatológico fundamental para comprender el daño cerebral de origen inmunitario.',
-    journal: 'Rev Neurol.',
-    year: 2017,
-    details: '64(12):549-559',
-    doi: '10.33588/rn.6412.2016426',
-    pmid: '28598547',
+    pmid: null,
     pmcid: null
   },
   {
-    authors: 'Garcia-Reyero N, Escalon L, Prats E, Faria M, Soares A, Raldúa D.',
-    title: 'Targeted Gene Expression in Zebrafish Exposed to Chlorpyrifos-Oxon Confirms Phenotype-Specific Mechanisms Leading to Neurotoxicity.',
-    journal: 'Toxicol Sci.',
-    year: 2015,
-    details: '148(2):360-372',
-    doi: '10.1093/toxsci/kfv189',
-    pmid: '26206916',
-    pmcid: 'PMC4635925'
+    authors: 'Parellada E, Gassó P.',
+    title: 'Glutamate and microglia activation as a driver of dendritic apoptosis: a core pathophysiological mechanism to understand schizophrenia.',
+    journal: 'Transl Psychiatry.',
+    year: 2021,
+    details: '11(1):271',
+    doi: '10.1038/s41398-021-01385-9',
+    pmid: null,
+    pmcid: null
   },
   {
-    authors: 'Sun G, He Y, Chuang D, Lee J, Gu Z, Simonyi A, Sun A.',
-    title: 'Integrating Cytosolic Phospholipase A2 with Oxidative/Nitrosative Signaling Pathways in Neurons: A Novel Therapeutic Strategy.',
+    authors: 'Garcia-Reyero N, Escalon BL, Prats E, Faria M, Soares AM, Raldúa D.',
+    title: 'Targeted Gene Expression in Zebrafish Exposed to Chlorpyrifos-Oxon Confirms Phenotype-Specific Mechanisms Leading to Adverse Outcomes.',
+    journal: 'Bull Environ Contam Toxicol.',
+    year: 2016,
+    details: '96(6):740-747',
+    doi: '10.1007/s00128-016-1798-3',
+    pmid: null,
+    pmcid: null
+  },
+  {
+    authors: 'Sun GY, He Y, Chuang DY, Shen X, Cui J, Simonyi A, Sun AY.',
+    title: 'Integrating Cytosolic Phospholipase A2 with Oxidative/Nitrosative Signaling Pathways in Neurons: A Novel Therapeutic Strategy for Alzheimer\'s Disease.',
     journal: 'Mol Neurobiol.',
-    year: 2013,
-    details: '48(2):341-350',
-    doi: '10.1007/s12035-013-8471-1',
-    pmid: '23780843',
-    pmcid: 'PMC3753755'
+    year: 2012,
+    details: '46(1):85-95',
+    doi: '10.1007/s12035-012-8261-1',
+    pmid: null,
+    pmcid: null
   },
   {
     authors: 'Wilson C, Muñoz-Palma E, González-Billault C.',
     title: 'From birth to death: A role for reactive oxygen species in neuronal development.',
     journal: 'Semin Cell Dev Biol.',
     year: 2018,
-    details: '80:43-53',
-    doi: '10.1016/j.semcdb.2017.09.011',
-    pmid: '28919133',
-    pmcid: 'PMC5879537'
+    details: '80:43-49',
+    doi: '10.1016/j.semcdb.2017.09.012',
+    pmid: null,
+    pmcid: null
   },
   {
     authors: 'Oswald MCW, Garnham N, Sweeney ST, Landgraf M.',
@@ -102,8 +102,8 @@ const references = [
     year: 2018,
     details: '592(5):679-691',
     doi: '10.1002/1873-3468.12972',
-    pmid: '29292516',
-    pmcid: 'PMC5851369'
+    pmid: null,
+    pmcid: null
   }
 ];
 
