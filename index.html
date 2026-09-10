@@ -1,36 +1,121 @@
-diff --git a/C:\Users\980022883\Documents\Codex\2026-09-09\github-plugin-github-openai-curated-remote\index.html b/C:\Users\980022883\Documents\Codex\2026-09-09\github-plugin-github-openai-curated-remote\index.html
-new file mode 100644
---- /dev/null
-+++ b/C:\Users\980022883\Documents\Codex\2026-09-09\github-plugin-github-openai-curated-remote\index.html
-@@ -0,0 +1,31 @@
-+<!doctype html>
-+<html lang="es">
-+<head>
-+  <meta charset="utf-8">
-+  <meta name="viewport" content="width=device-width, initial-scale=1">
-+  <meta name="description" content="Referencias bibliográficas del proyecto Vulnerabilidad del cerebro edad-dependiente ante insultos neurotóxicos.">
-+  <title>Referencias | Vulnerabilidad del cerebro</title>
-+  <link rel="stylesheet" href="style.css">
-+</head>
-+<body>
-+  <div class="background" aria-hidden="true"><div class="orb orb-one"></div><div class="orb orb-two"></div></div>
-+  <main class="container">
-+    <header class="hero">
-+      <div class="eyebrow"><span class="pulse"></span> Proyecto científico</div>
-+      <div class="hero-grid">
-+        <div>
-+          <h1>Vulnerabilidad del cerebro<br><em>edad-dependiente</em> ante insultos neurotóxicos</h1>
-+          <p class="subtitle">Referencias bibliográficas</p>
-+          <p class="intro">Fuentes bibliográficas utilizadas para el desarrollo del proyecto científico.</p>
-+        </div>
-+        <svg class="neural-mark" viewBox="0 0 180 180" role="img" aria-label="Motivo neuronal abstracto"><g fill="none" stroke="currentColor" stroke-width="1"><path d="M24 105C43 76 50 46 82 53s31 45 56 40M14 68c34 5 34 29 58 30s25-32 47-31 31 18 48 9M40 140c22-25 42-21 52-7s31 11 47-9" opacity=".55"/><circle cx="24" cy="105" r="5"/><circle cx="82" cy="53" r="7"/><circle cx="138" cy="93" r="5"/><circle cx="14" cy="68" r="4"/><circle cx="119" cy="67" r="6"/><circle cx="40" cy="140" r="4"/><circle cx="139" cy="124" r="7"/></g></svg>
-+      </div>
-+      <div class="toolbar"><span id="count" class="count">10 referencias</span><div class="actions"><button id="copyButton" type="button">Copiar referencias</button><button id="themeButton" class="theme" type="button" aria-label="Cambiar a modo claro"><span aria-hidden="true">☼</span><span class="theme-label">Claro</span></button></div></div>
-+    </header>
-+    <section id="references" class="references" aria-label="Lista de referencias"></section>
-+    <footer>Proyecto científico · Referencias bibliográficas</footer>
-+  </main>
-+  <div id="toast" class="toast" role="status" aria-live="polite">Referencias copiadas</div>
-+  <script src="script.js"></script>
-+</body>
-+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Referencias bibliográficas del proyecto Vulnerabilidad del cerebro edad-dependiente ante insultos neurotóxicos. Estudio de neurociencias enfocado en redox, excitotoxicidad y desarrollo cerebral.">
+  <title>NEUROREDOX — Vulnerabilidad del cerebro edad-dependiente | Bibliografía</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <span class="nav-logo">NEUROREDOX</span>
+      </div>
+      <div class="nav-items">
+        <a href="#references" class="nav-link">REFERENCIAS</a>
+        <button id="copyNavButton" class="nav-link-button" aria-label="Copiar todas las referencias">COPIAR</button>
+        <button id="themeNavButton" class="nav-theme" aria-label="Cambiar modo oscuro/claro">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <!-- Animated Background -->
+    <div class="hero-bg" aria-hidden="true">
+      <div class="neural-lattice"></div>
+      <svg class="neural-animation" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <filter id="blur">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+          </filter>
+        </defs>
+        <g class="neural-network" filter="url(#blur)">
+          <circle cx="100" cy="100" r="3" class="neuron"/>
+          <circle cx="300" cy="120" r="3" class="neuron"/>
+          <circle cx="80" cy="280" r="3" class="neuron"/>
+          <circle cx="320" cy="300" r="3" class="neuron"/>
+          <circle cx="200" cy="200" r="2.5" class="neuron"/>
+          <line x1="100" y1="100" x2="200" y2="200" class="synapse"/>
+          <line x1="300" y1="120" x2="200" y2="200" class="synapse"/>
+          <line x1="80" y1="280" x2="200" y2="200" class="synapse"/>
+          <line x1="320" y1="300" x2="200" y2="200" class="synapse"/>
+          <line x1="100" y1="100" x2="300" y2="120" class="synapse"/>
+          <line x1="80" y1="280" x2="320" y2="300" class="synapse"/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot"></span>
+        NEUROSCIENCE RESEARCH · BIBLIOGRAPHY
+      </div>
+      
+      <h1 class="hero-title">
+        Vulnerabilidad del cerebro<br>
+        <span class="title-emphasis">edad-dependiente</span><br>
+        ante insultos neurotóxicos
+      </h1>
+      
+      <p class="hero-subtitle">Referencias bibliográficas</p>
+      
+      <p class="hero-description">
+        Fuentes científicas que sustentan el estudio de la vulnerabilidad cerebral edad-dependiente frente a mecanismos oxidativos, excitotóxicos y neurotóxicos.
+      </p>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-number">10</div>
+        <div class="stat-label">REFERENCIAS</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-number">2009–2021</div>
+        <div class="stat-label">PERÍODO BIBLIOGRÁFICO</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- References Section -->
+    <section id="references" class="references-section" aria-label="Lista de referencias científicas">
+      <!-- Timeline will be inserted here via JavaScript -->
+      <div class="references-timeline">
+        <div class="timeline-line"></div>
+        <div id="references-list" class="references-list"></div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p class="footer-title">Scientific bibliography</p>
+        <p class="footer-subtitle">Vulnerabilidad del cerebro edad-dependiente ante insultos neurotóxicos</p>
+        <p class="footer-meta">10 references · 2009–2021</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true">
+    <span class="toast-icon">✓</span>
+    Referencias copiadas al portapapeles
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
