@@ -1,0 +1,10 @@
+* [33m9357b69[m[33m ([m[1;32mmain[m[33m)[m Add interactive scientific presentation
+[31m|[m * [33m2544d7d[m[33m ([m[1;36mHEAD[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Fix: Remove placeholder count and simplify references header
+[31m|[m * [33mdae3943[m Update JavaScript: Render references and remove placeholder count
+[31m|[m * [33m0ba20a9[m Update CSS: Implement academic editorial palette with ivory, sage green, warm accents
+[31m|[m * [33mc415386[m Redesign: Elegant scientific reference library with sophisticated editorial aesthetic
+[31m|[m * [33mcceb8f5[m CORRECCIÓN: Actualizar datos bibliográficos correctos para todas las 10 referencias
+[31m|[m * [33m7971b31[m REDESIGN: Complete and optimized JavaScript with proper DOM initialization
+[31m|[m * [33m69e59ab[m REDESIGN: Complete HTML with NEUROREDOX professional scientific layout
+[31m|[m * [33m0208fc1[m REDESIGN: Complete NEUROREDOX CSS with electric blue, violet, and professional scientific aesthetic
+[31m|[m * [33m3f1373c[m Corregir script.js: eliminar formato diff y restaurar código limpio
