@@ -25,59 +25,59 @@ const sections = [
     id: "objective", start: 208, end: 229, title: "Objetivo del estudio",
     chapter: "Objetivo", eyebrow: "Pregunta de investigación", lang: "es", type: "content",
     content: `<p class="objective-text">Determinar la susceptibilidad del cerebro en diferentes estadios postnatales frente a tres tipos de insultos neurotóxicos: excitotóxico, mitocondrial y oxidante.</p>
-      <div class="mechanisms" lang="en" aria-label="Tres mecanismos neurotóxicos"><span>Excitotoxic</span><span>Mitochondrial</span><span>Oxidative</span></div>`
+      <div class="mechanisms" lang="es" aria-label="Tres mecanismos neurotóxicos"><span>Excitotóxico</span><span>Mitocondrial</span><span>Oxidante</span></div>`
   },
   {
     id: "methodology", start: 230, end: 340, title: "Diseño experimental",
     chapter: "Metodología", eyebrow: "Materiales y métodos", lang: "es", type: "image",
     image: "assets/methodology.svg", imageAvailable: true,
     alt: "Metodología original del cartel: homogeneizados cerebrales, exposición a neurotóxicos y evaluaciones.",
-    content: `<div class="method-flow" lang="en">
-      <div class="method-step"><span>01</span><div><strong>Whole-brain homogenates</strong><p>Wistar rats at different postnatal stages.</p></div></div>
-      <div class="method-step"><span>02</span><div><strong>2-hour exposure</strong><p>FeSO₄ · 3-NP · QUIN</p></div></div>
-      <div class="method-step"><span>03</span><div><strong>Evaluation</strong><p>ROS · Lipid peroxidation · MTT reduction</p></div></div>
-      <div class="method-step"><span>04</span><div><strong>Data analysis</strong><p>Protein normalization and statistical analysis.</p></div></div>
+    content: `<div class="method-flow" lang="es">
+      <div class="method-step"><span>01</span><div><strong>Homogeneizados de cerebro completo</strong><p>Ratas Wistar en diferentes estadios postnatales.</p></div></div>
+      <div class="method-step"><span>02</span><div><strong>Exposición de 2 horas</strong><p>FeSO₄ · 3-NP · QUIN</p></div></div>
+      <div class="method-step"><span>03</span><div><strong>Evaluación</strong><p>ERO · Peroxidación lipídica · Reducción de MTT</p></div></div>
+      <div class="method-step"><span>04</span><div><strong>Análisis de datos</strong><p>Normalización por contenido de proteínas y análisis estadístico.</p></div></div>
     </div>`
   },
   {
-    id: "ros", start: 352, end: 411, title: "Reactive oxygen species",
-    chapter: "ROS", eyebrow: "Resultado 01", lang: "en", type: "image",
+    id: "ros", start: 352, end: 411, title: "Especies reactivas de oxígeno",
+    chapter: "ERO", eyebrow: "Resultado 01", lang: "es", type: "image",
     image: "assets/figure-ros.svg", imageAvailable: true,
     alt: "Figura original de especies reactivas de oxígeno por edad postnatal y exposición neurotóxica, con sus ejes, unidades y símbolos estadísticos.",
-    message: "Basal ROS levels were elevated during early postnatal stages, while the evaluated acute neurotoxic insults did not produce a significant additional increase."
+    message: "Los niveles basales de ERO fueron elevados durante los primeros estadios postnatales, mientras que los insultos neurotóxicos agudos evaluados no produjeron un aumento adicional significativo."
   },
   {
-    id: "lipid-peroxidation", start: 412, end: 474, title: "Lipid peroxidation",
-    chapter: "Peroxidación lipídica", eyebrow: "Resultado 02", lang: "en", type: "image",
+    id: "lipid-peroxidation", start: 412, end: 474, title: "Peroxidación lipídica",
+    chapter: "Peroxidación lipídica", eyebrow: "Resultado 02", lang: "es", type: "image",
     image: "assets/figure-lipid-peroxidation.svg", imageAvailable: true,
     alt: "Figura original de peroxidación lipídica por edad postnatal y exposición neurotóxica, con sus ejes, unidades y símbolos estadísticos.",
-    message: "Lipid peroxidation increased with postnatal age, while FeSO₄ produced a significant increase across the evaluated stages, particularly during later postnatal periods."
+    message: "La peroxidación lipídica aumentó con la edad postnatal, mientras que el FeSO₄ produjo un aumento significativo en los estadios evaluados, particularmente durante los periodos postnatales más tardíos."
   },
   {
-    id: "mtt", start: 475, end: 585, title: "Mitochondrial function",
-    chapter: "Función mitocondrial", eyebrow: "Resultado 03", lang: "en", type: "image",
+    id: "mtt", start: 475, end: 585, title: "Función mitocondrial",
+    chapter: "Función mitocondrial", eyebrow: "Resultado 03", lang: "es", type: "image",
     image: "assets/figure-mtt.svg", imageAvailable: true,
     alt: "Figura original de reducción de MTT por edad postnatal y exposición neurotóxica, con sus ejes, unidades y símbolos estadísticos.",
-    message: "FeSO₄ and 3-NP decreased MTT reduction, whereas acute QUIN exposure did not produce a significant change."
+    message: "El FeSO₄ y el 3-NP disminuyeron la reducción de MTT, mientras que la exposición aguda a QUIN no produjo un cambio significativo."
   },
   {
-    id: "discussion", start: 586, end: 656, title: "Integration of results",
-    chapter: "Discusión", eyebrow: "Lectura integrada", lang: "en", type: "multi",
+    id: "discussion", start: 586, end: 656, title: "Integración de resultados",
+    chapter: "Discusión", eyebrow: "Lectura integrada", lang: "es", type: "multi",
     figures: ["ros", "lipid-peroxidation", "mtt"],
-    message: "The susceptibility of the developing brain depends on both postnatal age and the neurotoxic mechanism evaluated."
+    message: "La susceptibilidad del cerebro en desarrollo depende tanto de la edad postnatal como del mecanismo neurotóxico evaluado."
   },
   {
-    id: "limitations", start: 657, end: 727, title: "Limitations & perspectives",
-    chapter: "Limitaciones", eyebrow: "Alcance del estudio", lang: "en", type: "content",
-    content: `<div class="perspectives"><div><h4>LIMITATIONS</h4><p>Whole-brain homogenates:</p><ul><li>Loss of cellular architecture</li><li>Limited cell-type specificity</li><li>Acute exposure window</li></ul></div>
-      <div><h4>FUTURE DIRECTIONS</h4><ul><li>Brain slices</li><li>Organotypic cultures</li><li>Different exposure times</li><li>Expanded mechanistic analysis</li></ul></div></div>`
+    id: "limitations", start: 657, end: 727, title: "Limitaciones y perspectivas",
+    chapter: "Limitaciones", eyebrow: "Alcance del estudio", lang: "es", type: "content",
+    content: `<div class="perspectives"><div><h4>LIMITACIONES</h4><p>Homogeneizados de cerebro completo:</p><ul><li>Pérdida de la arquitectura celular</li><li>Especificidad limitada por tipo celular</li><li>Periodo de exposición aguda</li></ul></div>
+      <div><h4>PERSPECTIVAS FUTURAS</h4><ul><li>Cortes cerebrales</li><li>Cultivos organotípicos</li><li>Diferentes tiempos de exposición</li><li>Ampliación del análisis de los mecanismos</li></ul></div></div>`
   },
   {
-    id: "conclusions", start: 728, end: 783, title: "Conclusions",
-    chapter: "Conclusiones", eyebrow: "Conclusiones", lang: "en", type: "content",
+    id: "conclusions", start: 728, end: 783, title: "Conclusiones",
+    chapter: "Conclusiones", eyebrow: "Conclusiones", lang: "es", type: "content",
     image: "assets/conclusions.svg", imageAvailable: false,
     alt: "Esquema original de conclusiones del cartel científico.",
-    content: `<ol class="conclusions-list"><li>ROS participate in physiological processes during early postnatal brain development.</li><li>Brain susceptibility to neurotoxic insults changes according to postnatal age.</li><li>ROS production, membrane oxidative damage and mitochondrial dysfunction represent related but distinct dimensions of neurotoxicity.</li></ol>`
+    content: `<ol class="conclusions-list"><li>Las ERO participan en procesos fisiológicos durante el desarrollo cerebral postnatal temprano.</li><li>La susceptibilidad del cerebro a los insultos neurotóxicos cambia según la edad postnatal.</li><li>La producción de ERO, el daño oxidante de las membranas y la disfunción mitocondrial representan dimensiones relacionadas pero distintas de la neurotoxicidad.</li></ol>`
   }
 ];
 
@@ -123,10 +123,10 @@ function contentFragment(html) {
 function figureFallback(section) {
   if (section.content && section.type === "image") return contentFragment(section.content);
   const fallback = createElement("div", "figure-fallback");
-  fallback.lang = "en";
-  fallback.append(createElement("span", "eyebrow", "Figure"),
+  fallback.lang = "es";
+  fallback.append(createElement("span", "eyebrow", "Figura"),
     createElement("strong", "", section.title),
-    createElement("p", "", "Scientific visual unavailable"));
+    createElement("p", "", "Imagen científica no disponible"));
   return fallback;
 }
 
@@ -181,7 +181,7 @@ function renderSection(section) {
   content.replaceChildren(heading, sectionRenderers[section.type](section));
   if (section.message) {
     const message = createElement("p", "key-message");
-    message.append(createElement("span", "key-label", section.lang === "en" ? "Key message" : "Idea clave"),
+    message.append(createElement("span", "key-label", "Idea clave"),
       document.createTextNode(section.message));
     content.append(message);
   }

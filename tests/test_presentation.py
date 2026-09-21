@@ -200,11 +200,11 @@ class PresentationTests(unittest.TestCase):
             figure.image = 'assets/missing-test.svg';
             seekToSection('ros');
         }""")
-        expect(self.page.locator('.figure-fallback')).to_contain_text('Scientific visual unavailable')
+        expect(self.page.locator('.figure-fallback')).to_contain_text('Imagen científica no disponible')
         self.page.locator('.chapter[data-section="discussion"]').click()
         expect(self.page.locator('.integration-figures .figure-fallback')).to_have_count(1)
         expect(self.page.locator('.integration-figures .figure-button')).to_have_count(2)
-        expect(self.page.locator('.key-message')).to_contain_text('depends on both postnatal age')
+        expect(self.page.locator('.key-message')).to_contain_text('depende tanto de la edad postnatal')
         self.page.locator('.chapter[data-section="methodology"]').click()
         expect(self.page.locator('.figure-button img')).to_have_attribute('src', 'assets/methodology.svg')
 
