@@ -1,154 +1,204 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Vulnerabilidad del cerebro edad-dependiente ante insultos neurotóxicos. Presentación científica interactiva con video, resultados sincronizados y referencias bibliográficas.">
+  <meta name="description" content="Age-dependent brain vulnerability to neurotoxic insults. Interactive scientific presentation with video, synchronized results and supporting references.">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="es_MX">
-  <meta property="og:title" content="Vulnerabilidad del cerebro edad-dependiente ante insultos neurotóxicos">
-  <meta property="og:description" content="Una presentación interactiva sobre desarrollo postnatal, equilibrio redox y susceptibilidad a los insultos neurotóxicos.">
-  <meta name="theme-color" content="#fffdf5">
-  <title>Vulnerabilidad del cerebro edad-dependiente ante insultos neurotóxicos</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%2380604b'/%3E%3Cpath d='M10 29V11l20 18V11' stroke='%23ffffff' stroke-width='3' fill='none'/%3E%3C/svg%3E">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Age-dependent brain vulnerability to neurotoxic insults">
+  <meta property="og:description" content="Postnatal development, redox balance and susceptibility to neurotoxic insults. Explore the study and meet researcher Jesús Arturo López Holguín.">
+  <meta name="theme-color" content="#f6f8fb">
+  <title>Brain Development & Neurotoxicity | Arturo López Holguín · SfN 2026</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%23122e4b'/%3E%3Cpath d='M10 29V11l20 18V11' stroke='%23ffffff' stroke-width='3' fill='none'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js?v=20260921-es" defer></script>
+  <script src="script.js?v=20261015-en" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#presentation">Saltar a la presentación</a>
+  <a class="skip-link" href="#presentation">Skip to the presentation</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Neurotoxicidad y desarrollo. Inicio">
+      <a class="brand" href="#top" aria-label="Neurotoxicity and brain development. Home">
         <svg class="neural-mark" viewBox="0 0 180 180" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="5"><path d="M24 105C43 76 50 46 82 53s31 45 56 40M14 68c34 5 34 29 58 30s25-32 47-31 31 18 48 9M40 140c22-25 42-21 52-7s31 11 47-9" opacity=".55"/><circle cx="24" cy="105" r="5"/><circle cx="82" cy="53" r="7"/><circle cx="138" cy="93" r="5"/><circle cx="14" cy="68" r="4"/><circle cx="119" cy="67" r="6"/><circle cx="40" cy="140" r="4"/><circle cx="139" cy="124" r="7"/></g></svg>
-        <span>Neurotoxicidad <span class="brand-secondary">& desarrollo</span></span>
+        <span>Neurotoxicity <span class="brand-secondary">& brain development</span></span>
       </a>
-      <nav class="top-nav" aria-label="Navegación principal">
-        <a href="#presentation">Presentación</a><a href="#results">Resultados</a><a href="#references">Referencias</a>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a href="#presentation">Presentation</a>
+        <a href="#results">Results</a>
+        <a href="#references">References</a>
+        <a class="profile-nav" href="#about">About &amp; CV</a>
+        <a class="contact-nav" href="#contact">Contact <span aria-hidden="true">↗</span></a>
       </nav>
-      <button id="themeButton" class="theme-button" type="button" aria-label="Cambiar a modo oscuro"><span class="theme-symbol" aria-hidden="true">◐</span><span class="theme-label">Oscuro</span></button>
+      <button id="themeButton" class="theme-button" type="button" aria-label="Switch to dark mode"><span class="theme-symbol" aria-hidden="true">◐</span><span class="theme-label">Dark</span></button>
     </div>
   </header>
 
   <main id="top" class="container">
     <section class="hero" aria-labelledby="project-title">
       <div class="hero-heading">
-        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span><span lang="es">Presentación científica interactiva</span></p>
-        <h1 id="project-title">Vulnerabilidad del cerebro <em>edad-dependiente</em> ante insultos neurotóxicos</h1>
-        <p class="project-authors">J. A. LOPEZ-HOLGUIN <span>·</span> N. PLAMENOV-DONCHEV <span>·</span> V. PEREZ DE LA CRUZ</p>
+        <a class="eyebrow meeting-link" href="https://www.sfn.org/meetings/neuroscience-2026" target="_blank" rel="noopener noreferrer">SfN · Neuroscience 2026 <span aria-hidden="true">↗</span></a>
+        <p class="meeting-detail">Annual meeting · Washington, D.C. · November 14–18, 2026</p>
+        <h1 id="project-title"><em>Age-dependent</em> brain vulnerability to neurotoxic insults</h1>
+        <p class="hero-description">Postnatal development, redox balance and mitochondrial function.</p>
+        <p class="project-authors"><a href="#about" aria-label="About Jesús Arturo López Holguín">J. A. LOPEZ-HOLGUIN</a> <span>·</span> N. PLAMENOV-DONCHEV <span>·</span> V. PEREZ DE LA CRUZ</p>
+        <div class="hero-actions"><a class="primary-button" href="#presentation">Explore the study <span aria-hidden="true">↓</span></a><a class="text-button" href="#about">Meet the researcher &amp; view CV <span aria-hidden="true">↗</span></a></div>
       </div>
-      <div class="affiliations" lang="es">
-        <p><span class="affiliation-number">01</span><span>Laboratorio de Fisiología,<br>Facultad de Medicina y Ciencias Biomédicas,<br>Universidad Autónoma de Chihuahua,<br>Chihuahua, México.</span></p>
-        <p><span class="affiliation-number">02</span><span>Laboratorio de Neurobioquímica y Conducta,<br>Instituto Nacional de Neurología y Neurocirugía<br>“Manuel Velasco Suárez”,<br>Ciudad de México, México.</span></p>
+      <aside class="study-framework" aria-labelledby="framework-title">
+        <p class="eyebrow">The experimental framework</p>
+        <h2 id="framework-title">One developing brain.<br>Three mechanisms of injury.</h2>
+        <ol class="framework-list">
+          <li><span>01</span><div><strong>Excitotoxic</strong><p>Quinolinic acid · QUIN</p></div><span aria-hidden="true">↗</span></li>
+          <li><span>02</span><div><strong>Mitochondrial</strong><p>3-nitropropionic acid · 3-NP</p></div><span aria-hidden="true">↗</span></li>
+          <li><span>03</span><div><strong>Oxidative</strong><p>Ferrous sulfate · FeSO₄</p></div><span aria-hidden="true">↗</span></li>
+        </ol>
+        <p class="framework-footnote">Wistar rat whole-brain homogenates<br>Postnatal stages · Two-hour exposure</p>
+      </aside>
+      <div class="affiliations">
+        <p><span class="affiliation-number">01</span><span><strong>Autonomous University of Chihuahua</strong><br>Physiology Laboratory · Faculty of Medicine and Biomedical Sciences<br>Chihuahua, Mexico</span></p>
+        <p><span class="affiliation-number">02</span><span><strong>National Institute of Neurology and Neurosurgery</strong><br>“Manuel Velasco Suárez” · Neurobiochemistry and Behavior Laboratory<br>Mexico City, Mexico</span></p>
       </div>
     </section>
 
     <section id="presentation" class="presentation" aria-labelledby="presentation-title">
       <div class="section-heading">
-        <div class="heading-group"><span class="section-number">01 /</span><h2 id="presentation-title">Explora la presentación</h2></div>
-        <p class="section-note">Una lectura del cerebro en desarrollo</p>
+        <div class="heading-group"><span class="section-number">01 /</span><h2 id="presentation-title">Explore the presentation</h2></div>
+        <p class="section-note">A closer look at the developing brain</p>
       </div>
       <div class="presentation-workspace">
         <div class="media-column">
           <div class="video-frame" id="video-frame" aria-busy="true">
             <div id="youtube-player"></div>
             <div id="video-placeholder" class="video-placeholder" role="status">
-              <span class="eyebrow" lang="es">Presentación científica</span>
+              <span class="eyebrow" lang="en">Scientific presentation</span>
               <span class="placeholder-play" aria-hidden="true">▷</span>
-              <p id="video-status">Cargando la presentación…</p>
-              <span class="video-placeholder-note">Desarrollo postnatal · Estrés oxidante · Neurotoxicidad</span>
-              <a class="placeholder-link" data-video-link href="https://www.youtube.com/watch?v=DtUZBM2LZTA" target="_blank" rel="noopener noreferrer">Ver en YouTube <span aria-hidden="true">↗</span></a>
+              <p id="video-status">Loading the presentation…</p>
+              <span class="video-placeholder-note">Postnatal development · Oxidative stress · Neurotoxicity</span>
+              <a class="placeholder-link" data-video-link href="https://www.youtube.com/watch?v=DtUZBM2LZTA" target="_blank" rel="noopener noreferrer">Watch on YouTube <span aria-hidden="true">↗</span></a>
             </div>
           </div>
           <div class="video-toolbar">
-            <div class="playback-info"><button id="playButton" class="play-button" type="button" disabled aria-label="Reproducir video"><span id="play-icon" aria-hidden="true">▷</span><span id="play-label">Reproducir</span></button><span class="toolbar-divider" aria-hidden="true"></span><span id="playback-status" role="status">Conectando con YouTube</span></div>
-            <a data-video-link href="https://www.youtube.com/watch?v=DtUZBM2LZTA" target="_blank" rel="noopener noreferrer" aria-label="Abrir presentación en YouTube, en una pestaña nueva">YouTube <span aria-hidden="true">↗</span></a>
+            <div class="playback-info"><button id="playButton" class="play-button" type="button" disabled aria-label="Play video"><span id="play-icon" aria-hidden="true">▷</span><span id="play-label">Play</span></button><span class="toolbar-divider" aria-hidden="true"></span><span id="playback-status" role="status">Connecting to YouTube</span></div>
+            <a data-video-link href="https://www.youtube.com/watch?v=DtUZBM2LZTA" target="_blank" rel="noopener noreferrer" aria-label="Open the presentation on YouTube in a new tab">YouTube <span aria-hidden="true">↗</span></a>
           </div>
-          <p class="presentation-hint"><span aria-hidden="true">↳</span> Los contenidos acompañan al video. Selecciona un capítulo para explorar a tu ritmo.</p>
+          <p class="presentation-hint"><span aria-hidden="true">↳</span> Study notes follow the video. Select a chapter to explore at your own pace.</p>
         </div>
         <aside class="active-panel" aria-labelledby="active-title">
-          <div class="panel-topline"><p id="active-eyebrow" class="eyebrow">Marco teórico</p><span id="active-index" class="panel-index">01 / 09</span></div>
-          <div id="active-content" class="active-content" tabindex="0" role="region" aria-labelledby="active-title"><h3 id="active-title">Desarrollo cerebral y equilibrio redox</h3><p>Explora el papel de las especies reactivas de oxígeno a lo largo del desarrollo postnatal.</p></div>
-          <div class="panel-bottomline"><span id="panel-mode"><span class="status-dot" aria-hidden="true"></span> Contenido del capítulo</span><span id="active-time">00:01 — 03:27</span></div>
+          <div class="panel-topline"><p id="active-eyebrow" class="eyebrow">Background</p><span id="active-index" class="panel-index">01 / 09</span></div>
+          <div id="active-content" class="active-content" tabindex="0" role="region" aria-labelledby="active-title"><h3 id="active-title">Brain development and redox balance</h3><p>Explore the role of reactive oxygen species throughout postnatal development.</p></div>
+          <div class="panel-bottomline"><span id="panel-mode"><span class="status-dot" aria-hidden="true"></span> Chapter content</span><span id="active-time">00:01 — 03:27</span></div>
         </aside>
       </div>
       <p id="chapter-announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
       <div class="presentation-navigation">
-        <div class="chapters-heading"><span class="eyebrow">Capítulos</span><span class="navigation-hint">Selecciona un momento de la presentación <span aria-hidden="true">↗</span></span></div>
-        <nav id="chapters" class="chapters" aria-label="Capítulos de la presentación"></nav>
+        <div class="chapters-heading"><span class="eyebrow">Chapters</span><span class="navigation-hint">Choose a point in the presentation <span aria-hidden="true">↗</span></span></div>
+        <nav id="chapters" class="chapters" aria-label="Presentation chapters"></nav>
         <div class="timeline-area">
-          <div class="timeline-heading"><label for="timeline-seek">Recorrido de la presentación</label><span class="timecode"><span id="current-time">00:00</span> <span class="time-separator">/</span> <span id="total-time">13:03</span></span></div>
+          <div class="timeline-heading"><label for="timeline-seek">Presentation timeline</label><span class="timecode"><span id="current-time">00:00</span> <span class="time-separator">/</span> <span id="total-time">13:03</span></span></div>
           <div class="timeline-control" id="timeline-control">
             <div id="timeline-segments" class="timeline-segments" aria-hidden="true"></div>
             <div id="timeline-progress" class="timeline-progress" aria-hidden="true"></div>
             <div id="timeline-position" class="timeline-position" aria-hidden="true"></div>
-            <input id="timeline-seek" class="timeline-seek" type="range" min="0" max="783" value="0" step="1" aria-label="Posición en el video" aria-valuetext="00:00, Introducción">
+            <input id="timeline-seek" class="timeline-seek" type="range" min="0" max="783" value="0" step="1" aria-label="Video position" aria-valuetext="00:00, Introduction">
           </div>
-          <div class="timeline-labels" aria-hidden="true"><span>Inicio</span><span>Marco teórico</span><span>Diseño experimental</span><span>Resultados y discusión</span><span>Conclusiones</span></div>
+          <div class="timeline-labels" aria-hidden="true"><span>Start</span><span>Background</span><span>Experimental design</span><span>Results and discussion</span><span>Conclusions</span></div>
         </div>
       </div>
-      <noscript><p class="noscript-message">Activa JavaScript para sincronizar el video y explorar los capítulos. Puedes <a href="https://www.youtube.com/watch?v=DtUZBM2LZTA">ver la presentación en YouTube</a> y consultar todas las referencias a continuación.</p></noscript>
+      <p class="source-language-note">The recorded presentation and original figures are in Spanish. English study notes and result summaries accompany each chapter.</p>
+      <noscript><p class="noscript-message">Enable JavaScript to synchronize the video and explore the chapters. You can <a href="https://www.youtube.com/watch?v=DtUZBM2LZTA">watch the presentation on YouTube</a> and read all references below.</p></noscript>
     </section>
 
     <section id="results" class="results-section" aria-labelledby="results-title">
-      <div class="section-heading"><div class="heading-group"><span class="section-number">02 /</span><h2 id="results-title">Una pregunta, tres dimensiones</h2></div><span class="eyebrow">Claves del estudio</span></div>
-      <div class="study-overview"><p class="study-question">¿Cómo cambia la susceptibilidad del cerebro a los insultos neurotóxicos durante el desarrollo?</p><p>El estudio evalúa especies reactivas de oxígeno, peroxidación lipídica y reducción de MTT en diferentes estadios postnatales, frente a insultos excitotóxicos, mitocondriales y oxidantes.</p></div>
+      <div class="section-heading"><div class="heading-group"><span class="section-number">02 /</span><h2 id="results-title">One question. Three dimensions.</h2></div><span class="eyebrow">Study highlights</span></div>
+      <div class="study-overview"><p class="study-question">How does susceptibility to neurotoxic insults change as the brain develops?</p><p>The study evaluates reactive oxygen species, lipid peroxidation and MTT reduction across postnatal stages following excitotoxic, mitochondrial and oxidative insults.</p></div>
       <div id="result-summaries" class="result-summaries"></div>
-      <div class="study-takeaway"><span class="eyebrow">Lectura integrada</span><p lang="es">La susceptibilidad del cerebro en desarrollo depende tanto de la edad postnatal como del mecanismo neurotóxico evaluado.</p><a href="#presentation" data-section="discussion">Explorar la discusión <span aria-hidden="true">↗</span></a></div>
+      <div class="study-takeaway"><span class="eyebrow">Integrated interpretation</span><p lang="en">The susceptibility of the developing brain depends on both postnatal age and the neurotoxic mechanism examined.</p><a href="#presentation" data-section="discussion">Explore the discussion <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section id="about" class="about-section" aria-labelledby="about-title">
+      <div class="section-heading"><div class="heading-group"><span class="section-number">03 /</span><h2 id="about-title">Meet the researcher</h2></div><p class="section-note">Medicine · Neuroscience · Research</p></div>
+      <div class="profile-layout">
+        <div class="profile-copy">
+          <p class="eyebrow">Medical student &amp; neuroscience researcher</p>
+          <h3>Jesús Arturo<br>López Holguín</h3>
+          <p class="profile-affiliation">Faculty of Medicine and Biomedical Sciences<br>Autonomous University of Chihuahua · Mexico</p>
+          <p class="profile-bio">Medical student completing a pre-graduate internship, with research experience at the National Institute of Neurology and Neurosurgery in Mexico City and an international exchange at the University of Belgrade. His work focuses on neurodevelopmental vulnerability, oxidative stress and the kynurenine pathway.</p>
+          <div class="profile-interests" aria-label="Selected research interests"><span>Neurodevelopment</span><span>Redox biology</span><span>Excitotoxicity</span><span>Mitochondrial function</span></div>
+          <div class="profile-experience">
+            <div><span class="experience-date">2024–2025</span><div><h4>Neurobiochemistry &amp; Behavior</h4><p>Research rotations · INNN “Manuel Velasco Suárez”<br>Supervised by Dr. Verónica Pérez de la Cruz</p></div></div>
+            <div><span class="experience-date">2024</span><div><h4>Sleep &amp; Neurophysiology</h4><p>International research exchange · University of Belgrade<br>Institute of Medical Physiology “Richard Burian”</p></div></div>
+            <div><span class="experience-date">2023–present</span><div><h4>Medical Physiology</h4><p>Undergraduate instructor · Autonomous University of Chihuahua</p></div></div>
+          </div>
+        </div>
+        <aside class="cv-card" aria-labelledby="cv-card-title">
+          <svg class="document-mark" viewBox="0 0 48 56" fill="none" aria-hidden="true"><path d="M9 2h21l10 11v40H9zM30 2v12h10M17 25h15M17 33h15M17 41h10" stroke="currentColor" stroke-width="1.5"/></svg>
+          <p class="eyebrow">Academic &amp; research profile</p>
+          <h3 id="cv-card-title">Curriculum vitae</h3>
+          <p>Education, research experience, teaching, scientific work and technical skills.</p>
+          <dl class="cv-highlights"><div><dt>Medical training</dt><dd>2021–present · UACH</dd></div><div><dt>Cumulative GPA</dt><dd>9.47 / 10.00</dd></div><div><dt>Languages</dt><dd>Spanish · English (B2)</dd></div></dl>
+          <a class="primary-button" href="cv.html">View full CV <span aria-hidden="true">↗</span></a>
+          <a class="download-link" href="assets/CV_Arturo_Lopez_EN.docx" download>Download CV <span class="file-type">DOCX · English</span><span aria-hidden="true">↓</span></a>
+        </aside>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section" aria-labelledby="contact-title">
+      <div class="contact-copy"><p class="eyebrow">Continue the conversation</p><h2 id="contact-title">Let’s connect.</h2><p>For scientific discussions, research collaboration and academic opportunities.</p></div>
+      <div class="contact-details"><a class="contact-email" href="mailto:a358172@uach.mx">a358172@uach.mx <span aria-hidden="true">↗</span></a><p>Institutional email · UACH</p><a class="secondary-email" href="mailto:arturolol559@gmail.com">Personal email: arturolol559@gmail.com <span aria-hidden="true">↗</span></a></div>
     </section>
 
     <section id="references" class="references-section" aria-labelledby="references-title">
-      <div class="section-heading references-heading"><div class="heading-group"><span class="section-number">03 /</span><h2 id="references-title">Referencias bibliográficas</h2><span id="count" class="count">10 fuentes</span></div><button id="copyButton" type="button" class="outline-button">Copiar referencias <span aria-hidden="true">↗</span></button></div>
-      <p class="references-intro">La literatura científica que acompaña a este trabajo.</p>
+      <div class="section-heading references-heading"><div class="heading-group"><span class="section-number">04 /</span><h2 id="references-title">References</h2><span id="count" class="count">10 sources</span></div><button id="copyButton" type="button" class="outline-button">Copy references <span aria-hidden="true">↗</span></button></div>
+      <p class="references-intro">The scientific literature supporting this work.</p>
       <div class="references" id="reference-list">
-        <!-- Las diez referencias originales se conservan aquí, también sin JavaScript. -->
+        <!-- All ten references remain accessible without JavaScript. -->
         <article class="reference">
           <span class="ref-number">01</span>
-          <div class="reference-body"><p class="authors">Huang TT, Leu D, Zou Y.</p><h3 class="title">Estrés oxidante y regulación redox de las funciones cognitivas dependientes del hipocampo.</h3><p class="citation"><i>Arch Biochem Biophys.</i> 2015 jun 15;576:2-7.</p><nav class="links" aria-label="Enlaces de la referencia 1"><a href="https://doi.org/10.1016/j.abb.2015.03.014" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.abb.2015.03.014</a> <a href="https://pubmed.ncbi.nlm.nih.gov/25797440/" target="_blank" rel="noopener noreferrer">PMID: 25797440</a> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4456256/" target="_blank" rel="noopener noreferrer">PMCID: PMC4456256</a></nav></div>
+          <div class="reference-body"><p class="authors">Huang TT, Leu D, Zou Y.</p><h3 class="title">Oxidative stress and redox regulation on hippocampal-dependent cognitive functions.</h3><p class="citation"><i>Arch Biochem Biophys.</i> 2015 Jun 15;576:2-7.</p><nav class="links" aria-label="Links for reference 1"><a href="https://doi.org/10.1016/j.abb.2015.03.014" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.abb.2015.03.014</a> <a href="https://pubmed.ncbi.nlm.nih.gov/25797440/" target="_blank" rel="noopener noreferrer">PMID: 25797440</a> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4456256/" target="_blank" rel="noopener noreferrer">PMCID: PMC4456256</a></nav></div>
         </article>
         <article class="reference">
           <span class="ref-number">02</span>
-          <div class="reference-body"><p class="authors">Franco R, Vargas MR.</p><h3 class="title">Biología redox en la función neurológica, la disfunción y el envejecimiento.</h3><p class="citation"><i>Antioxid Redox Signal.</i> 2018 jun 20;28(18):1583-1586.</p><nav class="links" aria-label="Enlaces de la referencia 2"><a href="https://doi.org/10.1089/ars.2018.7509" target="_blank" rel="noopener noreferrer">DOI: 10.1089/ars.2018.7509</a> <a href="https://pubmed.ncbi.nlm.nih.gov/29634346/" target="_blank" rel="noopener noreferrer">PMID: 29634346</a> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5962327/" target="_blank" rel="noopener noreferrer">PMCID: PMC5962327</a></nav></div>
+          <div class="reference-body"><p class="authors">Franco R, Vargas MR.</p><h3 class="title">Redox biology in neurological function, dysfunction, and aging.</h3><p class="citation"><i>Antioxid Redox Signal.</i> 2018 Jun 20;28(18):1583-1586.</p><nav class="links" aria-label="Links for reference 2"><a href="https://doi.org/10.1089/ars.2018.7509" target="_blank" rel="noopener noreferrer">DOI: 10.1089/ars.2018.7509</a> <a href="https://pubmed.ncbi.nlm.nih.gov/29634346/" target="_blank" rel="noopener noreferrer">PMID: 29634346</a> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5962327/" target="_blank" rel="noopener noreferrer">PMCID: PMC5962327</a></nav></div>
         </article>
         <article class="reference">
           <span class="ref-number">03</span>
-          <div class="reference-body"><p class="authors">Aizenman E, Loring RH, Reynolds IJ, Rosenberg PA.</p><h3 class="title">Biología redox de los procesos excitotóxicos: el receptor NMDA, la quinona TOPA y la liberación oxidativa de zinc intracelular.</h3><p class="citation"><i>Front Neurosci.</i> 2020 jul 24;14:778.</p><nav class="links" aria-label="Enlaces de la referencia 3"><a href="https://doi.org/10.3389/fnins.2020.00778" target="_blank" rel="noopener noreferrer">DOI: 10.3389/fnins.2020.00778</a> <a href="https://pubmed.ncbi.nlm.nih.gov/32792905/" target="_blank" rel="noopener noreferrer">PMID: 32792905</a> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7393236/" target="_blank" rel="noopener noreferrer">PMCID: PMC7393236</a></nav></div>
+          <div class="reference-body"><p class="authors">Aizenman E, Loring RH, Reynolds IJ, Rosenberg PA.</p><h3 class="title">Redox biology of excitotoxic processes: the NMDA receptor, TOPA quinone, and the oxidative liberation of intracellular zinc.</h3><p class="citation"><i>Front Neurosci.</i> 2020 Jul 24;14:778.</p><nav class="links" aria-label="Links for reference 3"><a href="https://doi.org/10.3389/fnins.2020.00778" target="_blank" rel="noopener noreferrer">DOI: 10.3389/fnins.2020.00778</a> <a href="https://pubmed.ncbi.nlm.nih.gov/32792905/" target="_blank" rel="noopener noreferrer">PMID: 32792905</a> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7393236/" target="_blank" rel="noopener noreferrer">PMCID: PMC7393236</a></nav></div>
         </article>
         <article class="reference">
           <span class="ref-number">04</span>
-          <div class="reference-body"><p class="authors">Girouard H, Wang G, Gallo EF, Anrather J, Zhou P, Pickel VM, Iadecola C.</p><h3 class="title">La activación del receptor NMDA aumenta la producción de radicales libres a través del óxido nítrico y NOX2.</h3><p class="citation"><i>J Neurosci.</i> 2009 feb 25;29(8):2545-52.</p><nav class="links" aria-label="Enlaces de la referencia 4"><a href="https://doi.org/10.1523/JNEUROSCI.0133-09.2009" target="_blank" rel="noopener noreferrer">DOI: 10.1523/JNEUROSCI.0133-09.2009</a> <a href="https://pubmed.ncbi.nlm.nih.gov/19244529/" target="_blank" rel="noopener noreferrer">PMID: 19244529</a> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2669930/" target="_blank" rel="noopener noreferrer">PMCID: PMC2669930</a></nav></div>
+          <div class="reference-body"><p class="authors">Girouard H, Wang G, Gallo EF, Anrather J, Zhou P, Pickel VM, Iadecola C.</p><h3 class="title">NMDA receptor activation increases free radical production through nitric oxide and NOX2.</h3><p class="citation"><i>J Neurosci.</i> 2009 Feb 25;29(8):2545-52.</p><nav class="links" aria-label="Links for reference 4"><a href="https://doi.org/10.1523/JNEUROSCI.0133-09.2009" target="_blank" rel="noopener noreferrer">DOI: 10.1523/JNEUROSCI.0133-09.2009</a> <a href="https://pubmed.ncbi.nlm.nih.gov/19244529/" target="_blank" rel="noopener noreferrer">PMID: 19244529</a> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2669930/" target="_blank" rel="noopener noreferrer">PMCID: PMC2669930</a></nav></div>
         </article>
         <article class="reference">
           <span class="ref-number">05</span>
-          <div class="reference-body"><p class="authors">Reyes RC, Brennan AM, Shen Y, Baldwin Y, Swanson RA.</p><h3 class="title">La activación de los receptores NMDA neuronales induce estrés oxidante mediado por superóxido en neuronas y astrocitos vecinos.</h3><p class="citation"><i>J Neurosci.</i> 2012 sep 12;32(37):12973-8.</p><nav class="links" aria-label="Enlaces de la referencia 5"><a href="https://doi.org/10.1523/JNEUROSCI.1597-12.2012" target="_blank" rel="noopener noreferrer">DOI: 10.1523/JNEUROSCI.1597-12.2012</a> <a href="https://pubmed.ncbi.nlm.nih.gov/22973021/" target="_blank" rel="noopener noreferrer">PMID: 22973021</a> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3478885/" target="_blank" rel="noopener noreferrer">PMCID: PMC3478885</a></nav></div>
+          <div class="reference-body"><p class="authors">Reyes RC, Brennan AM, Shen Y, Baldwin Y, Swanson RA.</p><h3 class="title">Activation of neuronal NMDA receptors induces superoxide-mediated oxidative stress in neighboring neurons and astrocytes.</h3><p class="citation"><i>J Neurosci.</i> 2012 Sep 12;32(37):12973-8.</p><nav class="links" aria-label="Links for reference 5"><a href="https://doi.org/10.1523/JNEUROSCI.1597-12.2012" target="_blank" rel="noopener noreferrer">DOI: 10.1523/JNEUROSCI.1597-12.2012</a> <a href="https://pubmed.ncbi.nlm.nih.gov/22973021/" target="_blank" rel="noopener noreferrer">PMID: 22973021</a> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3478885/" target="_blank" rel="noopener noreferrer">PMCID: PMC3478885</a></nav></div>
         </article>
         <article class="reference">
           <span class="ref-number">06</span>
-          <div class="reference-body"><p class="authors">Parellada E, Gassó P.</p><h3 class="title">Activación del glutamato y la microglía como factor desencadenante de la apoptosis dendrítica: un mecanismo fisiopatológico fundamental para comprender la esquizofrenia.</h3><p class="citation"><i>Transl Psychiatry.</i> 2021;11:271.</p><nav class="links" aria-label="Enlaces de la referencia 6"><a href="https://doi.org/10.1038/s41398-021-01385-9" target="_blank" rel="noopener noreferrer">DOI: 10.1038/s41398-021-01385-9</a></nav></div>
+          <div class="reference-body"><p class="authors">Parellada E, Gassó P.</p><h3 class="title">Glutamate and microglia activation as a driver of dendritic apoptosis: a core pathophysiological mechanism to understand schizophrenia.</h3><p class="citation"><i>Transl Psychiatry.</i> 2021;11:271.</p><nav class="links" aria-label="Links for reference 6"><a href="https://doi.org/10.1038/s41398-021-01385-9" target="_blank" rel="noopener noreferrer">DOI: 10.1038/s41398-021-01385-9</a></nav></div>
         </article>
         <article class="reference">
           <span class="ref-number">07</span>
-          <div class="reference-body"><p class="authors">Garcia-Reyero N, Escalon L, Prats E, Faria M, Soares A, Raldúa D.</p><h3 class="title">El análisis dirigido de la expresión génica en peces cebra expuestos a clorpirifós-oxón confirma mecanismos específicos del fenotipo que conducen a efectos adversos.</h3><p class="citation"><i>Bull Environ Contam Toxicol.</i> 2016;96.</p><nav class="links" aria-label="Enlaces de la referencia 7"><a href="https://doi.org/10.1007/s00128-016-1798-3" target="_blank" rel="noopener noreferrer">DOI: 10.1007/s00128-016-1798-3</a></nav></div>
+          <div class="reference-body"><p class="authors">Garcia-Reyero N, Escalon L, Prats E, Faria M, Soares A, Raldúa D.</p><h3 class="title">Targeted gene expression in zebrafish exposed to chlorpyrifos-oxon confirms phenotype-specific mechanisms leading to adverse outcomes.</h3><p class="citation"><i>Bull Environ Contam Toxicol.</i> 2016;96.</p><nav class="links" aria-label="Links for reference 7"><a href="https://doi.org/10.1007/s00128-016-1798-3" target="_blank" rel="noopener noreferrer">DOI: 10.1007/s00128-016-1798-3</a></nav></div>
         </article>
         <article class="reference">
           <span class="ref-number">08</span>
-          <div class="reference-body"><p class="authors">Sun G, He Y, Chuang D, Lee J, Gu Z, Simonyi A, Sun A.</p><h3 class="title">Integración de la fosfolipasa A2 citosólica con las vías de señalización oxidativa y nitrosativa en las neuronas: una nueva estrategia terapéutica para la enfermedad de Alzheimer.</h3><p class="citation"><i>Mol Neurobiol.</i> 2012;46:85-95.</p><nav class="links" aria-label="Enlaces de la referencia 8"><a href="https://doi.org/10.1007/s12035-012-8261-1" target="_blank" rel="noopener noreferrer">DOI: 10.1007/s12035-012-8261-1</a></nav></div>
+          <div class="reference-body"><p class="authors">Sun G, He Y, Chuang D, Lee J, Gu Z, Simonyi A, Sun A.</p><h3 class="title">Integrating cytosolic phospholipase A₂ with oxidative/nitrosative signaling pathways in neurons: a novel therapeutic strategy for AD.</h3><p class="citation"><i>Mol Neurobiol.</i> 2012;46:85-95.</p><nav class="links" aria-label="Links for reference 8"><a href="https://doi.org/10.1007/s12035-012-8261-1" target="_blank" rel="noopener noreferrer">DOI: 10.1007/s12035-012-8261-1</a></nav></div>
         </article>
         <article class="reference">
           <span class="ref-number">09</span>
-          <div class="reference-body"><p class="authors">Wilson C, Muñoz-Palma E, González-Billault C.</p><h3 class="title">Del nacimiento a la muerte: el papel de las especies reactivas de oxígeno en el desarrollo neuronal.</h3><p class="citation"><i>Semin Cell Dev Biol.</i> 2018 ago;80:43-49.</p><nav class="links" aria-label="Enlaces de la referencia 9"><a href="https://doi.org/10.1016/j.semcdb.2017.09.012" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.semcdb.2017.09.012</a> <a href="https://pubmed.ncbi.nlm.nih.gov/28899716/" target="_blank" rel="noopener noreferrer">PMID: 28899716</a></nav></div>
+          <div class="reference-body"><p class="authors">Wilson C, Muñoz-Palma E, González-Billault C.</p><h3 class="title">From birth to death: a role for reactive oxygen species in neuronal development.</h3><p class="citation"><i>Semin Cell Dev Biol.</i> 2018 Aug;80:43-49.</p><nav class="links" aria-label="Links for reference 9"><a href="https://doi.org/10.1016/j.semcdb.2017.09.012" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.semcdb.2017.09.012</a> <a href="https://pubmed.ncbi.nlm.nih.gov/28899716/" target="_blank" rel="noopener noreferrer">PMID: 28899716</a></nav></div>
         </article>
         <article class="reference">
           <span class="ref-number">10</span>
-          <div class="reference-body"><p class="authors">Oswald MCW, Garnham N, Sweeney ST, Landgraf M.</p><h3 class="title">Regulación del desarrollo y la función neuronal por las especies reactivas de oxígeno.</h3><p class="citation"><i>FEBS Lett.</i> 2018 mar;592(5):679-691.</p><nav class="links" aria-label="Enlaces de la referencia 10"><a href="https://doi.org/10.1002/1873-3468.12972" target="_blank" rel="noopener noreferrer">DOI: 10.1002/1873-3468.12972</a> <a href="https://pubmed.ncbi.nlm.nih.gov/29323696/" target="_blank" rel="noopener noreferrer">PMID: 29323696</a> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5888200/" target="_blank" rel="noopener noreferrer">PMCID: PMC5888200</a></nav></div>
+          <div class="reference-body"><p class="authors">Oswald MCW, Garnham N, Sweeney ST, Landgraf M.</p><h3 class="title">Regulation of neuronal development and function by ROS.</h3><p class="citation"><i>FEBS Lett.</i> 2018 Mar;592(5):679-691.</p><nav class="links" aria-label="Links for reference 10"><a href="https://doi.org/10.1002/1873-3468.12972" target="_blank" rel="noopener noreferrer">DOI: 10.1002/1873-3468.12972</a> <a href="https://pubmed.ncbi.nlm.nih.gov/29323696/" target="_blank" rel="noopener noreferrer">PMID: 29323696</a> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5888200/" target="_blank" rel="noopener noreferrer">PMCID: PMC5888200</a></nav></div>
         </article>
       </div>
     </section>
-    <footer class="site-footer"><div><strong>Neurotoxicidad & desarrollo</strong><span>J. A. Lopez-Holguin · N. Plamenov-Donchev · V. Perez de la Cruz</span></div><p><span lang="es">Presentación científica</span> <span aria-hidden="true">/</span> 2026</p><a href="assets/poster.svg" target="_blank" rel="noopener noreferrer">Cartel completo ↗</a><a href="#top">Volver al inicio ↑</a></footer>
+    <footer class="site-footer"><div><strong>Neurotoxicity & brain development</strong><span>J. A. Lopez-Holguin · N. Plamenov-Donchev · V. Perez de la Cruz</span></div><p><span lang="en">Scientific presentation</span> <span aria-hidden="true">/</span> 2026</p><a href="assets/poster.svg" target="_blank" rel="noopener noreferrer">Original poster (Spanish) ↗</a><a href="#top">Back to top ↑</a></footer>
   </main>
 
   <dialog id="figure-modal" class="figure-modal" aria-labelledby="modal-title" aria-describedby="modal-description">
-    <div class="modal-shell"><div class="modal-header"><div><p class="eyebrow">Figura del cartel científico</p><h2 id="modal-title"></h2></div><button id="modal-close" type="button" class="modal-close" aria-label="Cerrar figura ampliada" autofocus>×</button></div><div id="modal-visual" class="modal-visual"></div><p id="modal-description" class="modal-description">El video está pausado. Puedes reanudarlo cuando cierres esta figura.</p></div>
+    <div class="modal-shell"><div class="modal-header"><div><p class="eyebrow">Original study figure · Spanish</p><h2 id="modal-title"></h2></div><button id="modal-close" type="button" class="modal-close" aria-label="Close expanded figure" autofocus>×</button></div><div id="modal-visual" class="modal-visual"></div><p id="modal-description" class="modal-description">The video is paused. You can resume it after closing this figure.</p></div>
   </dialog>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 </body>

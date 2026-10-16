@@ -6,6 +6,7 @@ Run: python tests/test_presentation.py
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+from hashlib import sha256
 from threading import Thread
 import unittest
 
@@ -94,9 +95,9 @@ class PresentationTests(unittest.TestCase):
         self.assertEqual(self.page.evaluate('mockPlayer.options.videoId'), 'DtUZBM2LZTA')
         self.assertEqual(self.page.evaluate('mockPlayer.options.playerVars.origin'), self.base)
         self.page.locator('#playButton').click()
-        expect(self.page.locator('#playButton')).to_have_attribute('aria-label', 'Pausar video')
+        expect(self.page.locator('#playButton')).to_have_attribute('aria-label', 'Pause video')
         self.page.locator('#playButton').click()
-        expect(self.page.locator('#playback-status')).to_have_text('En pausa')
+        expect(self.page.locator('#playback-status')).to_have_text('Paused')
         self.assertEqual(self.page.evaluate('mockPlayer.calls'), [['play'], ['pause']])
 
     def test_every_boundary_gap_and_manual_forward_backward_seek(self):
@@ -200,11 +201,11 @@ class PresentationTests(unittest.TestCase):
             figure.image = 'assets/missing-test.svg';
             seekToSection('ros');
         }""")
-        expect(self.page.locator('.figure-fallback')).to_contain_text('Imagen científica no disponible')
+        expect(self.page.locator('.figure-fallback')).to_contain_text('Scientific image unavailable')
         self.page.locator('.chapter[data-section="discussion"]').click()
         expect(self.page.locator('.integration-figures .figure-fallback')).to_have_count(1)
         expect(self.page.locator('.integration-figures .figure-button')).to_have_count(2)
-        expect(self.page.locator('.key-message')).to_contain_text('depende tanto de la edad postnatal')
+        expect(self.page.locator('.key-message')).to_contain_text('depends on both postnatal age')
         self.page.locator('.chapter[data-section="methodology"]').click()
         expect(self.page.locator('.figure-button img')).to_have_attribute('src', 'assets/methodology.svg')
 
@@ -215,7 +216,7 @@ class PresentationTests(unittest.TestCase):
         self.page.on('response', lambda response: local_failures.append(response.url)
                      if response.url.startswith(self.base) and response.status >= 400 else None)
         self.load()
-        expect(self.page.locator('#video-status')).to_contain_text('YouTube no está disponible')
+        expect(self.page.locator('#video-status')).to_contain_text('YouTube is unavailable')
         for section in ('ros', 'discussion', 'conclusions', 'introduction'):
             self.page.locator(f'.chapter[data-section="{section}"]').click()
             self.expect_section(section)
@@ -236,7 +237,7 @@ class PresentationTests(unittest.TestCase):
         expect(self.page.locator('.reference')).to_have_count(10)
         expect(self.page.locator('.reference .links a')).to_have_count(23)
         self.page.locator('#copyButton').click()
-        expect(self.page.locator('#toast')).to_contain_text('Referencias copiadas')
+        expect(self.page.locator('#toast')).to_contain_text('References copied')
         copied = self.page.evaluate('navigator.clipboard.readText()')
         self.assertEqual(len(copied.split('\n\n')), 10)
         self.assertIn('https://doi.org/10.1002/1873-3468.12972', copied)
@@ -269,7 +270,7 @@ class PresentationTests(unittest.TestCase):
 
     def test_theme_storage_restriction_and_project_subdirectory(self):
         self.load('/project/')
-        expect(self.page.locator('#active-content')).to_contain_text('equilibrio redox')
+        expect(self.page.locator('#active-content')).to_contain_text('redox balance')
         self.page.locator('#themeButton').click()
         expect(self.page.locator('body')).to_have_class('dark')
         self.page.reload()
@@ -279,6 +280,51 @@ class PresentationTests(unittest.TestCase):
         expect(self.page.locator('.chapter')).to_have_count(9)
         self.page.locator('#themeButton').click()
         expect(self.page.locator('body')).to_have_class('dark')
+
+    def test_profile_cv_contact_and_original_download_under_project_path(self):
+        self.load('/project/')
+        expect(self.page.locator('html')).to_have_attribute('lang', 'en')
+        self.page.locator('.top-nav a[href="#about"]').click()
+        expect(self.page.locator('#about-title')).to_be_in_viewport()
+        self.page.locator('.cv-card a[href="cv.html"]').click()
+        expect(self.page).to_have_url(self.base + '/project/cv.html')
+        expect(self.page.locator('.cv-section')).to_have_count(11)
+        expect(self.page.locator('#scientific-output h3')).to_have_text('Manuscripts in Preparation')
+        expect(self.page.locator('#scientific-output li')).to_have_count(5)
+        expect(self.page.locator('#education')).to_contain_text('M.D.) — in progress')
+        expect(self.page.locator('#languages')).to_contain_text('English: B2')
+        with self.page.expect_download() as download_event:
+            self.page.locator('.cv-actions a[download]').click()
+        download = download_event.value
+        self.assertEqual(download.suggested_filename, 'CV_Arturo_Lopez_EN.docx')
+        self.assertEqual(sha256(Path(download.path()).read_bytes()).digest(),
+                         sha256((ROOT / 'assets/CV_Arturo_Lopez_EN.docx').read_bytes()).digest())
+        self.page.locator('.top-nav .contact-nav').click()
+        expect(self.page.locator('#contact-title')).to_be_in_viewport()
+        expect(self.page.locator('.contact-email')).to_have_attribute('href', 'mailto:a358172@uach.mx')
+        expect(self.page.locator('.secondary-email')).to_have_attribute('href', 'mailto:arturolol559@gmail.com')
+
+    def test_cv_responsive_print_action_and_no_javascript(self):
+        self.page.goto(self.base + '/cv.html')
+        for width in (320, 390, 768, 1024, 1440):
+            self.page.set_viewport_size({'width': width, 'height': 900})
+            dimensions = self.page.evaluate('({scroll: document.documentElement.scrollWidth, viewport: innerWidth})')
+            self.assertLessEqual(dimensions['scroll'], dimensions['viewport'])
+        self.page.evaluate('window.print = () => { window.printRequested = true; }')
+        self.page.locator('#printCv').click()
+        self.assertTrue(self.page.evaluate('window.printRequested'))
+        self.page.emulate_media(media='print')
+        expect(self.page.locator('.cv-actions')).not_to_be_visible()
+        expect(self.page.locator('#education')).to_be_visible()
+        context = self.browser.new_context(java_script_enabled=False)
+        page = context.new_page()
+        page.goto(self.base + '/')
+        page.locator('.top-nav a[href="#about"]').click()
+        page.locator('.cv-card a[href="cv.html"]').click()
+        expect(page.locator('.cv-section')).to_have_count(11)
+        expect(page.locator('.cv-actions a[download]')).to_be_visible()
+        expect(page.locator('#printCv')).not_to_be_visible()
+        context.close()
 
 
 if __name__ == '__main__':

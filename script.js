@@ -8,76 +8,76 @@ const VIDEO_ID = "DtUZBM2LZTA";
 // Activa imageAvailable solo después de guardar el SVG original extraído.
 const sections = [
   {
-    id: "introduction", start: 1, end: 207, title: "Desarrollo cerebral y equilibrio redox",
-    chapter: "Introducción", eyebrow: "Marco teórico", lang: "es", type: "image",
+    id: "introduction", start: 1, end: 207, title: "Brain development and redox balance",
+    chapter: "Introduction", eyebrow: "Background", lang: "en", type: "image",
     image: "assets/intro.svg", imageAvailable: true,
-    alt: "Esquema de introducción del cartel: especies reactivas de oxígeno y desarrollo cerebral.",
-    message: "Papel fisiológico y patológico de las especies reactivas de oxígeno, equilibrio redox, desarrollo cerebral, metabolismo mitocondrial y excitotoxicidad mediada por NMDA.",
+    alt: "Original poster diagram (Spanish): reactive oxygen species and brain development.",
+    message: "Physiological and pathological roles of reactive oxygen species in redox balance, brain development, mitochondrial metabolism and NMDA-mediated excitotoxicity.",
     content: `<div class="concept-map">
-      <span class="concept-kicker">Desarrollo cerebral postnatal</span>
-      <p class="concept-center">Equilibrio redox</p>
+      <span class="concept-kicker">Postnatal brain development</span>
+      <p class="concept-center">Redox balance</p>
       <div class="concept-connector" aria-hidden="true"></div>
-      <div class="concept-branches"><div><strong>Funciones fisiológicas</strong><span>Señalización y desarrollo</span></div><div><strong>Procesos patológicos</strong><span>Estrés oxidante y excitotoxicidad</span></div></div>
-      <p class="concept-footnote">Metabolismo mitocondrial · Receptores NMDA</p>
+      <div class="concept-branches"><div><strong>Physiological functions</strong><span>Signaling and development</span></div><div><strong>Pathological processes</strong><span>Oxidative stress and excitotoxicity</span></div></div>
+      <p class="concept-footnote">Mitochondrial metabolism · NMDA receptors</p>
     </div>`
   },
   {
-    id: "objective", start: 208, end: 229, title: "Objetivo del estudio",
-    chapter: "Objetivo", eyebrow: "Pregunta de investigación", lang: "es", type: "content",
-    content: `<p class="objective-text">Determinar la susceptibilidad del cerebro en diferentes estadios postnatales frente a tres tipos de insultos neurotóxicos: excitotóxico, mitocondrial y oxidante.</p>
-      <div class="mechanisms" lang="es" aria-label="Tres mecanismos neurotóxicos"><span>Excitotóxico</span><span>Mitocondrial</span><span>Oxidante</span></div>`
+    id: "objective", start: 208, end: 229, title: "Study objective",
+    chapter: "Objective", eyebrow: "Research question", lang: "en", type: "content",
+    content: `<p class="objective-text">To determine brain susceptibility at different postnatal stages to three types of neurotoxic insults: excitotoxic, mitochondrial and oxidative.</p>
+      <div class="mechanisms" lang="en" aria-label="Three neurotoxic mechanisms"><span>Excitotoxic</span><span>Mitochondrial</span><span>Oxidative</span></div>`
   },
   {
-    id: "methodology", start: 230, end: 340, title: "Diseño experimental",
-    chapter: "Metodología", eyebrow: "Materiales y métodos", lang: "es", type: "image",
+    id: "methodology", start: 230, end: 340, title: "Experimental design",
+    chapter: "Methods", eyebrow: "Materials and methods", lang: "en", type: "image",
     image: "assets/methodology.svg", imageAvailable: true,
-    alt: "Metodología original del cartel: homogeneizados cerebrales, exposición a neurotóxicos y evaluaciones.",
-    content: `<div class="method-flow" lang="es">
-      <div class="method-step"><span>01</span><div><strong>Homogeneizados de cerebro completo</strong><p>Ratas Wistar en diferentes estadios postnatales.</p></div></div>
-      <div class="method-step"><span>02</span><div><strong>Exposición de 2 horas</strong><p>FeSO₄ · 3-NP · QUIN</p></div></div>
-      <div class="method-step"><span>03</span><div><strong>Evaluación</strong><p>ERO · Peroxidación lipídica · Reducción de MTT</p></div></div>
-      <div class="method-step"><span>04</span><div><strong>Análisis de datos</strong><p>Normalización por contenido de proteínas y análisis estadístico.</p></div></div>
+    alt: "Original poster methods (Spanish): brain homogenates, neurotoxic exposures and assays.",
+    content: `<div class="method-flow" lang="en">
+      <div class="method-step"><span>01</span><div><strong>Whole-brain homogenates</strong><p>Wistar rats at different postnatal stages.</p></div></div>
+      <div class="method-step"><span>02</span><div><strong>Two-hour exposure</strong><p>FeSO₄ · 3-NP · QUIN</p></div></div>
+      <div class="method-step"><span>03</span><div><strong>Assessment</strong><p>ROS · Lipid peroxidation · MTT reduction</p></div></div>
+      <div class="method-step"><span>04</span><div><strong>Data analysis</strong><p>Normalization to protein content and statistical analysis.</p></div></div>
     </div>`
   },
   {
-    id: "ros", start: 352, end: 411, title: "Especies reactivas de oxígeno",
-    chapter: "ERO", eyebrow: "Resultado 01", lang: "es", type: "image",
+    id: "ros", start: 352, end: 411, title: "Reactive oxygen species",
+    chapter: "ROS", eyebrow: "Result 01", lang: "en", type: "image",
     image: "assets/figure-ros.svg", imageAvailable: true,
-    alt: "Figura original de especies reactivas de oxígeno por edad postnatal y exposición neurotóxica, con sus ejes, unidades y símbolos estadísticos.",
-    message: "Los niveles basales de ERO fueron elevados durante los primeros estadios postnatales, mientras que los insultos neurotóxicos agudos evaluados no produjeron un aumento adicional significativo."
+    alt: "Original ROS figure (Spanish), showing postnatal ages, neurotoxic exposures, axes, units and statistical annotations.",
+    message: "Basal ROS levels were elevated at early postnatal stages. The acute neurotoxic insults tested did not produce a significant additional increase."
   },
   {
-    id: "lipid-peroxidation", start: 412, end: 474, title: "Peroxidación lipídica",
-    chapter: "Peroxidación lipídica", eyebrow: "Resultado 02", lang: "es", type: "image",
+    id: "lipid-peroxidation", start: 412, end: 474, title: "Lipid peroxidation",
+    chapter: "Lipid peroxidation", eyebrow: "Result 02", lang: "en", type: "image",
     image: "assets/figure-lipid-peroxidation.svg", imageAvailable: true,
-    alt: "Figura original de peroxidación lipídica por edad postnatal y exposición neurotóxica, con sus ejes, unidades y símbolos estadísticos.",
-    message: "La peroxidación lipídica aumentó con la edad postnatal, mientras que el FeSO₄ produjo un aumento significativo en los estadios evaluados, particularmente durante los periodos postnatales más tardíos."
+    alt: "Original lipid peroxidation figure (Spanish), showing postnatal ages, neurotoxic exposures, axes, units and statistical annotations.",
+    message: "Lipid peroxidation increased with postnatal age. FeSO₄ significantly increased lipid peroxidation, particularly at later postnatal stages."
   },
   {
-    id: "mtt", start: 475, end: 585, title: "Función mitocondrial",
-    chapter: "Función mitocondrial", eyebrow: "Resultado 03", lang: "es", type: "image",
+    id: "mtt", start: 475, end: 585, title: "Mitochondrial function",
+    chapter: "Mitochondrial function", eyebrow: "Result 03", lang: "en", type: "image",
     image: "assets/figure-mtt.svg", imageAvailable: true,
-    alt: "Figura original de reducción de MTT por edad postnatal y exposición neurotóxica, con sus ejes, unidades y símbolos estadísticos.",
-    message: "El FeSO₄ y el 3-NP disminuyeron la reducción de MTT, mientras que la exposición aguda a QUIN no produjo un cambio significativo."
+    alt: "Original MTT reduction figure (Spanish), showing postnatal ages, neurotoxic exposures, axes, units and statistical annotations.",
+    message: "FeSO₄ and 3-NP decreased MTT reduction. Acute QUIN exposure did not produce a significant change."
   },
   {
-    id: "discussion", start: 586, end: 656, title: "Integración de resultados",
-    chapter: "Discusión", eyebrow: "Lectura integrada", lang: "es", type: "multi",
+    id: "discussion", start: 586, end: 656, title: "Integrating the results",
+    chapter: "Discussion", eyebrow: "Integrated interpretation", lang: "en", type: "multi",
     figures: ["ros", "lipid-peroxidation", "mtt"],
-    message: "La susceptibilidad del cerebro en desarrollo depende tanto de la edad postnatal como del mecanismo neurotóxico evaluado."
+    message: "The susceptibility of the developing brain depends on both postnatal age and the neurotoxic mechanism examined."
   },
   {
-    id: "limitations", start: 657, end: 727, title: "Limitaciones y perspectivas",
-    chapter: "Limitaciones", eyebrow: "Alcance del estudio", lang: "es", type: "content",
-    content: `<div class="perspectives"><div><h4>LIMITACIONES</h4><p>Homogeneizados de cerebro completo:</p><ul><li>Pérdida de la arquitectura celular</li><li>Especificidad limitada por tipo celular</li><li>Periodo de exposición aguda</li></ul></div>
-      <div><h4>PERSPECTIVAS FUTURAS</h4><ul><li>Cortes cerebrales</li><li>Cultivos organotípicos</li><li>Diferentes tiempos de exposición</li><li>Ampliación del análisis de los mecanismos</li></ul></div></div>`
+    id: "limitations", start: 657, end: 727, title: "Limitations and future directions",
+    chapter: "Limitations", eyebrow: "Study scope", lang: "en", type: "content",
+    content: `<div class="perspectives"><div><h4>LIMITATIONS</h4><p>Whole-brain homogenates:</p><ul><li>Loss of cellular architecture</li><li>Limited cell-type specificity</li><li>Acute exposure period</li></ul></div>
+      <div><h4>FUTURE DIRECTIONS</h4><ul><li>Brain slices</li><li>Organotypic cultures</li><li>Different exposure durations</li><li>Further mechanistic analysis</li></ul></div></div>`
   },
   {
-    id: "conclusions", start: 728, end: 783, title: "Conclusiones",
-    chapter: "Conclusiones", eyebrow: "Conclusiones", lang: "es", type: "content",
+    id: "conclusions", start: 728, end: 783, title: "Conclusions",
+    chapter: "Conclusions", eyebrow: "Conclusions", lang: "en", type: "content",
     image: "assets/conclusions.svg", imageAvailable: false,
-    alt: "Esquema original de conclusiones del cartel científico.",
-    content: `<ol class="conclusions-list"><li>Las ERO participan en procesos fisiológicos durante el desarrollo cerebral postnatal temprano.</li><li>La susceptibilidad del cerebro a los insultos neurotóxicos cambia según la edad postnatal.</li><li>La producción de ERO, el daño oxidante de las membranas y la disfunción mitocondrial representan dimensiones relacionadas pero distintas de la neurotoxicidad.</li></ol>`
+    alt: "Original scientific poster conclusions diagram.",
+    content: `<ol class="conclusions-list"><li>ROS participate in physiological processes during early postnatal brain development.</li><li>Brain susceptibility to neurotoxic insults varies with postnatal age.</li><li>ROS production, oxidative membrane damage and mitochondrial dysfunction represent related but distinct dimensions of neurotoxicity.</li></ol>`
   }
 ];
 
@@ -123,10 +123,10 @@ function contentFragment(html) {
 function figureFallback(section) {
   if (section.content && section.type === "image") return contentFragment(section.content);
   const fallback = createElement("div", "figure-fallback");
-  fallback.lang = "es";
-  fallback.append(createElement("span", "eyebrow", "Figura"),
+  fallback.lang = "en";
+  fallback.append(createElement("span", "eyebrow", "Figure"),
     createElement("strong", "", section.title),
-    createElement("p", "", "Imagen científica no disponible"));
+    createElement("p", "", "Scientific image unavailable"));
   return fallback;
 }
 
@@ -134,11 +134,11 @@ function createFigure(section) {
   if (!section.imageAvailable || failedImages.has(section.image)) return figureFallback(section);
   const button = createElement("button", "figure-button");
   button.type = "button";
-  button.setAttribute("aria-label", `Ampliar figura: ${section.title}`);
+  button.setAttribute("aria-label", `Expand original figure: ${section.title}`);
   button.setAttribute("aria-haspopup", "dialog");
   const img = createElement("img");
   img.alt = section.alt || section.title;
-  img.lang = "es";
+  img.lang = "en";
   img.decoding = "async";
   img.addEventListener("error", () => {
     failedImages.add(section.image);
@@ -147,15 +147,20 @@ function createFigure(section) {
     if (hadFocus) $("#active-content").focus({ preventScroll: true });
   }, { once: true });
   img.src = section.image;
-  const caption = createElement("span", "figure-expand", "Ampliar figura ↗");
-  caption.lang = "es";
+  const caption = createElement("span", "figure-expand", "Expand original figure ↗");
+  caption.lang = "en";
   button.append(img, caption);
   button.addEventListener("click", () => openFigureModal(section, button));
   return button;
 }
 
 const sectionRenderers = {
-  image: (section) => createFigure(section),
+  image: (section) => {
+    const fragment = document.createDocumentFragment();
+    if (section.content) fragment.append(contentFragment(section.content));
+    fragment.append(createFigure(section));
+    return fragment;
+  },
   content: (section) => {
     const fragment = document.createDocumentFragment();
     if (section.imageAvailable) fragment.append(createFigure(section));
@@ -181,7 +186,7 @@ function renderSection(section) {
   content.replaceChildren(heading, sectionRenderers[section.type](section));
   if (section.message) {
     const message = createElement("p", "key-message");
-    message.append(createElement("span", "key-label", "Idea clave"),
+    message.append(createElement("span", "key-label", "Key finding"),
       document.createTextNode(section.message));
     content.append(message);
   }
@@ -193,7 +198,7 @@ function renderSection(section) {
   $("#active-eyebrow").textContent = section.eyebrow;
   $("#active-index").textContent = `${String(sections.indexOf(section) + 1).padStart(2, "0")} / ${String(sections.length).padStart(2, "0")}`;
   $("#active-time").textContent = `${formatTime(section.start)} — ${formatTime(section.end)}`;
-  $("#chapter-announcement").textContent = `Capítulo: ${section.chapter}, ${formatTime(section.start)}.`;
+  $("#chapter-announcement").textContent = `Chapter: ${section.chapter}, ${formatTime(section.start)}.`;
 }
 
 function buildChapterNavigation() {
@@ -305,12 +310,12 @@ function readPlayerTime() {
 function setPlaybackState(state) {
   playerState = state;
   const playing = state === 1 || state === 3;
-  const labels = { "-1": "Listo para reproducir", 0: "Presentación finalizada", 1: "Reproduciendo", 2: "En pausa", 3: "Cargando video…", 5: "Listo para reproducir" };
-  $("#playback-status").textContent = labels[state] || "Listo para reproducir";
-  $("#playButton").setAttribute("aria-label", playing ? "Pausar video" : "Reproducir video");
-  $("#play-label").textContent = playing ? "Pausar" : "Reproducir";
+  const labels = { "-1": "Ready to play", 0: "Presentation ended", 1: "Playing", 2: "Paused", 3: "Loading video…", 5: "Ready to play" };
+  $("#playback-status").textContent = labels[state] || "Ready to play";
+  $("#playButton").setAttribute("aria-label", playing ? "Pause video" : "Play video");
+  $("#play-label").textContent = playing ? "Pause" : "Play";
   $("#play-icon").textContent = playing ? "Ⅱ" : "▷";
-  $("#panel-mode").replaceChildren(createElement("span", "status-dot"), document.createTextNode(" Sincronizado con el video"));
+  $("#panel-mode").replaceChildren(createElement("span", "status-dot"), document.createTextNode(" Synchronized with video"));
   $("#panel-mode .status-dot").setAttribute("aria-hidden", "true");
 }
 
@@ -323,8 +328,8 @@ function showVideoFallback(message) {
   $("#video-placeholder").hidden = false;
   $("#video-status").textContent = message;
   $("#playButton").disabled = true;
-  $("#playback-status").textContent = "Video no disponible aquí";
-  $("#panel-mode").textContent = "Exploración por capítulos";
+  $("#playback-status").textContent = "Video unavailable here";
+  $("#panel-mode").textContent = "Explore the chapters";
 }
 
 function onPlayerReady(event) {
@@ -334,7 +339,7 @@ function onPlayerReady(event) {
   $("#video-placeholder").hidden = true;
   $("#video-frame").setAttribute("aria-busy", "false");
   $("#playButton").disabled = false;
-  player.getIframe().title = "Presentación científica: vulnerabilidad del cerebro edad-dependiente ante insultos neurotóxicos";
+  player.getIframe().title = "Scientific presentation: age-dependent brain vulnerability to neurotoxic insults";
   setPlaybackState(player.getPlayerState());
   if (pendingSeek !== null) {
     // A chapter selected during loading must not trigger unsolicited playback.
@@ -364,18 +369,18 @@ function initializeYouTubePlayer() {
           setPlaybackState(event.data);
           readPlayerTime();
         },
-        onError() { showVideoFallback("Consulta esta presentación en YouTube."); },
-        onAutoplayBlocked() { $("#playback-status").textContent = "Pulsa reproducir en el video"; }
+        onError() { showVideoFallback("Watch this presentation on YouTube."); },
+        onAutoplayBlocked() { $("#playback-status").textContent = "Press play in the video"; }
       }
     });
   } catch {
-    showVideoFallback("No se pudo conectar con YouTube.");
+    showVideoFallback("Could not connect to YouTube.");
   }
 }
 
 function loadYouTubeAPI() {
   window.onYouTubeIframeAPIReady = initializeYouTubePlayer;
-  loadingTimer = setTimeout(() => showVideoFallback("Puedes explorar los capítulos o abrir YouTube."), 15000);
+  loadingTimer = setTimeout(() => showVideoFallback("Explore the chapters or open YouTube."), 15000);
   if (window.YT?.Player) {
     initializeYouTubePlayer();
     return;
@@ -383,7 +388,7 @@ function loadYouTubeAPI() {
   const script = document.createElement("script");
   script.src = "https://www.youtube.com/iframe_api";
   script.async = true;
-  script.onerror = () => showVideoFallback("YouTube no está disponible. Explora los capítulos.");
+  script.onerror = () => showVideoFallback("YouTube is unavailable. Explore the chapters.");
   document.head.append(script);
 }
 
@@ -394,8 +399,8 @@ function openFigureModal(section, trigger) {
   $("#modal-title").textContent = section.title;
   $("#modal-title").lang = section.lang;
   $("#modal-description").textContent = playerReady
-    ? "El video está pausado. Puedes reanudarlo cuando cierres esta figura."
-    : "Figura original del cartel científico.";
+    ? "The video is paused. You can resume it after closing this figure. Original figure labels are in Spanish."
+    : "Original scientific poster figure. Source labels are in Spanish.";
   const img = createElement("img");
   img.alt = section.alt || section.title;
   img.addEventListener("error", () => {
@@ -416,15 +421,15 @@ function closeFigureModal() {
 
 function renderResultSummaries() {
   const container = $("#result-summaries");
-  sections.filter((section) => section.eyebrow.startsWith("Resultado ")).forEach((section) => {
+  sections.filter((section) => section.eyebrow.startsWith("Result ")).forEach((section) => {
     const article = createElement("article", "result-summary");
     const title = createElement("h3", "", section.title);
     const message = createElement("p", "", section.message);
     title.lang = message.lang = section.lang;
-    const link = createElement("a", "", `Explorar resultado · ${formatTime(section.start)} ↗`);
+    const link = createElement("a", "", `Explore result · ${formatTime(section.start)} ↗`);
     link.href = "#presentation";
     link.dataset.section = section.id;
-    link.setAttribute("aria-label", `Explorar ${section.title}, ${formatTime(section.start)}`);
+    link.setAttribute("aria-label", `Explore ${section.title}, ${formatTime(section.start)}`);
     article.append(createElement("span", "eyebrow", section.eyebrow), title, message, link);
     container.append(article);
   });
@@ -441,9 +446,9 @@ function initializeReferences() {
   const references = [...document.querySelectorAll("#reference-list .reference")];
   references.forEach((reference, index) => {
     reference.querySelector(".ref-number").textContent = String(index + 1).padStart(2, "0");
-    reference.querySelector(".links").setAttribute("aria-label", `Enlaces de la referencia ${index + 1}`);
+    reference.querySelector(".links").setAttribute("aria-label", `Links for reference ${index + 1}`);
   });
-  $("#count").textContent = `${references.length} fuentes`;
+  $("#count").textContent = `${references.length} sources`;
   $("#copyButton").addEventListener("click", async () => {
     const citations = references.map((reference, index) => {
       const citation = [".authors", ".title", ".citation"].map((selector) => reference.querySelector(selector).textContent.trim()).join(" ");
@@ -452,14 +457,14 @@ function initializeReferences() {
     }).join("\n\n");
     try {
       await navigator.clipboard.writeText(citations);
-      showToast("Referencias copiadas con sus enlaces.");
+      showToast("References copied with links.");
     } catch {
       const selection = window.getSelection();
       const range = document.createRange();
       range.selectNodeContents($("#reference-list"));
       selection.removeAllRanges();
       selection.addRange(range);
-      showToast("Referencias seleccionadas. Usa Copiar en tu navegador.");
+      showToast("References selected. Use Copy in your browser.");
     }
   });
 }
@@ -467,10 +472,10 @@ function initializeReferences() {
 function initializeTheme() {
   const applyTheme = (dark) => {
     document.body.classList.toggle("dark", dark);
-    $("#themeButton").setAttribute("aria-label", dark ? "Cambiar a modo claro" : "Cambiar a modo oscuro");
-    $(".theme-label").textContent = dark ? "Claro" : "Oscuro";
+    $("#themeButton").setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+    $(".theme-label").textContent = dark ? "Light" : "Dark";
     $(".theme-symbol").textContent = dark ? "☼" : "◐";
-    $('meta[name="theme-color"]').content = dark ? "#211e1a" : "#fffdf5";
+    $('meta[name="theme-color"]').content = dark ? "#0d1827" : "#f6f8fb";
   };
   try { applyTheme(localStorage.getItem("theme") === "dark"); } catch { applyTheme(false); }
   $("#themeButton").addEventListener("click", () => {
