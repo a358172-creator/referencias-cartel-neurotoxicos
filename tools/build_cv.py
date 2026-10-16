@@ -91,9 +91,9 @@ def build():
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Curriculum vitae of Jesús Arturo López Holguín. Medical training, neuroscience research, teaching and scientific work at UACH, INNN and the University of Belgrade.">
-  <meta name="theme-color" content="#f6f8fb">
+  <meta name="theme-color" content="#F3EFE4">
   <title>Curriculum Vitae | Jesús Arturo López Holguín</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20261015-palette">
   <script src="cv.js" defer></script>
 </head>
 <body class="cv-page">

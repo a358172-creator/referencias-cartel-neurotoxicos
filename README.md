@@ -5,10 +5,11 @@ English-language scientific presentation and researcher profile for the SfN Neur
 ## Visitor experience
 
 - Persistent navigation to Presentation, Results, References, About & CV, and Contact.
+- A prominent “Explore in 3D” button opens the external visual experience with models of pathophysiology and experimental design in a new tab.
 - English scientific content, chapter navigation, player controls, accessibility labels and bibliography.
 - A profile of Jesús Arturo López Holguín, with education, research and teaching highlights taken from the supplied CV.
 - A full browser-readable CV at `cv.html`, original DOCX download, institutional and personal email links, and a print / save as PDF action.
-- Navy, white and slate visual identity, responsive layouts, light/dark themes on the study page, keyboard access and reduced-motion support.
+- Ivory, warm white, sand, orange, blue and gray visual palette, responsive layouts, light/dark themes on the study page, keyboard access and reduced-motion support.
 
 The nine timed chapters, YouTube player, timeline, figure dialogs and ten references with their 23 DOI/PubMed/PMC links remain available. The original recording and scientific figure assets are in Spanish. Their source content is unchanged; English explanations accompany the chapters. The conference details link to the [official SfN Neuroscience 2026 page](https://www.sfn.org/meetings/neuroscience-2026). No poster acceptance, session number or presentation slot is asserted.
 

@@ -475,7 +475,7 @@ function initializeTheme() {
     $("#themeButton").setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
     $(".theme-label").textContent = dark ? "Light" : "Dark";
     $(".theme-symbol").textContent = dark ? "☼" : "◐";
-    $('meta[name="theme-color"]').content = dark ? "#0d1827" : "#f6f8fb";
+    $('meta[name="theme-color"]').content = dark ? "#454B50" : "#F3EFE4";
   };
   try { applyTheme(localStorage.getItem("theme") === "dark"); } catch { applyTheme(false); }
   $("#themeButton").addEventListener("click", () => {
